@@ -32,7 +32,7 @@ class BaseViewController: UIViewController {
         let count: Int? = navigationController?.viewControllers.count
         if count != nil && count! > 1 {
             // 设置导航栏返回按钮图片
-            navigationItem.leftBarButtonItem = UIBarButtonItem(arrowImageName: "global_arrow_normal", target: self, selector: #selector(popViewController))
+            navigationItem.leftBarButtonItem = UIBarButtonItem(arrowImageName: "return_button_normal", target: self, selector: #selector(popViewController))
         }
     }
 

@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		54FA2E006F9E7282C1C62D04 /* Pods_SwiftWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */; };
+		E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6A2012E9A000E86770 /* Array+Extension.swift */; };
+		E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */; };
 		E91792D12005E60D00AC0376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91792D02005E60D00AC0376 /* Assets.xcassets */; };
 		E91792FD2005EAA000AC0376 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91792FC2005EAA000AC0376 /* AppDelegate.swift */; };
 		E91793022005EB6600AC0376 /* BaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91792FE2005EB6600AC0376 /* BaseTableViewController.swift */; };
 		E91793032005EB6600AC0376 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91792FF2005EB6600AC0376 /* BaseTabBarController.swift */; };
 		E91793042005EB6600AC0376 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793002005EB6600AC0376 /* BaseNavigationController.swift */; };
 		E91793052005EB6600AC0376 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793012005EB6600AC0376 /* BaseViewController.swift */; };
-		E91793072005EB7C00AC0376 /* BaseResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793062005EB7C00AC0376 /* BaseResponseModel.swift */; };
 		E917930A2005EB9700AC0376 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793082005EB9600AC0376 /* BaseTableViewCell.swift */; };
 		E917930B2005EB9700AC0376 /* CommonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793092005EB9600AC0376 /* CommonTableViewCell.swift */; };
 		E917930F2005EBC000AC0376 /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E917930C2005EBC000AC0376 /* AppConstants.swift */; };
@@ -55,11 +56,22 @@
 		E91793832006172E00AC0376 /* CommonButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793822006172E00AC0376 /* CommonButton.swift */; };
 		E9179385200624B100AC0376 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9179384200624B100AC0376 /* ForgetPasswordViewController.swift */; };
 		E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9179386200624D500AC0376 /* RegisterViewController.swift */; };
+		E91793892006FBE600AC0376 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793882006FBE600AC0376 /* ImageButton.swift */; };
+		E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */; };
+		E9A6842E20070E0700EE82AC /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842D20070E0700EE82AC /* LoginServices.swift */; };
+		E9A6843020070E5B00EE82AC /* DistrictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842F20070E5B00EE82AC /* DistrictModel.swift */; };
+		E9A6843220070ED000EE82AC /* DistrictNumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6843120070ED000EE82AC /* DistrictNumCell.swift */; };
+		E9A684342007133700EE82AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A684332007133700EE82AC /* HomeViewController.swift */; };
+		E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A684352007135F00EE82AC /* TransferViewController.swift */; };
+		E9A684382007137600EE82AC /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A684372007137600EE82AC /* MineViewController.swift */; };
+		E9A6843C20088B2F00EE82AC /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6843B20088B2F00EE82AC /* ResponseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0B5DDB111F7A4FE9793CB16C /* Pods-SwiftWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		361138C3D9F22DA1DACAF60E /* Pods-SwiftWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet.release.xcconfig"; sourceTree = "<group>"; };
+		E9170D6A2012E9A000E86770 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
+		E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		E91792C62005E60D00AC0376 /* SwiftWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91792D02005E60D00AC0376 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E91792D52005E60D00AC0376 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +80,6 @@
 		E91792FF2005EB6600AC0376 /* BaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 		E91793002005EB6600AC0376 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		E91793012005EB6600AC0376 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		E91793062005EB7C00AC0376 /* BaseResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponseModel.swift; sourceTree = "<group>"; };
 		E91793082005EB9600AC0376 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		E91793092005EB9600AC0376 /* CommonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonTableViewCell.swift; sourceTree = "<group>"; };
 		E917930C2005EBC000AC0376 /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
@@ -136,6 +147,15 @@
 		E91793822006172E00AC0376 /* CommonButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonButton.swift; sourceTree = "<group>"; };
 		E9179384200624B100AC0376 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		E9179386200624D500AC0376 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		E91793882006FBE600AC0376 /* ImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictNumViewController.swift; sourceTree = "<group>"; };
+		E9A6842D20070E0700EE82AC /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
+		E9A6842F20070E5B00EE82AC /* DistrictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictModel.swift; sourceTree = "<group>"; };
+		E9A6843120070ED000EE82AC /* DistrictNumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictNumCell.swift; sourceTree = "<group>"; };
+		E9A684332007133700EE82AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E9A684352007135F00EE82AC /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
+		E9A684372007137600EE82AC /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		E9A6843B20088B2F00EE82AC /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -201,12 +221,12 @@
 				E91792DC2005E7D400AC0376 /* AppDelegate */,
 				E91792DD2005E7D400AC0376 /* Application */,
 				E91792DE2005E7D400AC0376 /* Common */,
-				E91792E32005E7D400AC0376 /* Home */,
-				E91792E82005E7D400AC0376 /* Login */,
 				E91792ED2005E7D400AC0376 /* Main */,
+				E91792E82005E7D400AC0376 /* Login */,
+				E91792E32005E7D400AC0376 /* Home */,
+				E91792F72005E7D400AC0376 /* Transfer */,
 				E91792F12005E7D400AC0376 /* Mine */,
 				E91792F62005E7D400AC0376 /* Resources */,
-				E91792F72005E7D400AC0376 /* Transfer */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -255,7 +275,7 @@
 		E91792E02005E7D400AC0376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E91793062005EB7C00AC0376 /* BaseResponseModel.swift */,
+				E9A6843B20088B2F00EE82AC /* ResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -274,6 +294,7 @@
 		E91792E22005E7D400AC0376 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E91793882006FBE600AC0376 /* ImageButton.swift */,
 				E91793082005EB9600AC0376 /* BaseTableViewCell.swift */,
 				E91793092005EB9600AC0376 /* CommonTableViewCell.swift */,
 				E91793822006172E00AC0376 /* CommonButton.swift */,
@@ -295,6 +316,7 @@
 		E91792E42005E7D400AC0376 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9A684332007133700EE82AC /* HomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -335,9 +357,10 @@
 			isa = PBXGroup;
 			children = (
 				E91793352005F2F200AC0376 /* LoginViewController.swift */,
-				E91793372005F30500AC0376 /* GuideViewController.swift */,
-				E9179384200624B100AC0376 /* ForgetPasswordViewController.swift */,
 				E9179386200624D500AC0376 /* RegisterViewController.swift */,
+				E9179384200624B100AC0376 /* ForgetPasswordViewController.swift */,
+				E91793372005F30500AC0376 /* GuideViewController.swift */,
+				E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -345,6 +368,7 @@
 		E91792EA2005E7D400AC0376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9A6842F20070E5B00EE82AC /* DistrictModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +376,7 @@
 		E91792EB2005E7D400AC0376 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E9A6842D20070E0700EE82AC /* LoginServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -359,6 +384,7 @@
 		E91792EC2005E7D400AC0376 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9A6843120070ED000EE82AC /* DistrictNumCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -409,6 +435,7 @@
 		E91792F22005E7D400AC0376 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9A684372007137600EE82AC /* MineViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -456,6 +483,7 @@
 		E91792F82005E7D400AC0376 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E9A684352007135F00EE82AC /* TransferViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -521,6 +549,8 @@
 				E91793232005EEF800AC0376 /* UITextField+Extension.swift */,
 				E91793242005EEF800AC0376 /* UIView+Extension.swift */,
 				E917938020060E8C00AC0376 /* UIFont+Extension.swift */,
+				E9170D6A2012E9A000E86770 /* Array+Extension.swift */,
+				E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -689,6 +719,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
@@ -700,6 +731,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
@@ -724,21 +756,28 @@
 				E91793362005F2F200AC0376 /* LoginViewController.swift in Sources */,
 				E91793342005EF8B00AC0376 /* CommonUtils.swift in Sources */,
 				E91793282005EEF800AC0376 /* String+Extension.swift in Sources */,
+				E9A6843C20088B2F00EE82AC /* ResponseModel.swift in Sources */,
 				E917930A2005EB9700AC0376 /* BaseTableViewCell.swift in Sources */,
 				E91793262005EEF800AC0376 /* HttpManager.swift in Sources */,
 				E917932F2005EEF800AC0376 /* UILabel+Extension.swift in Sources */,
+				E9A6843220070ED000EE82AC /* DistrictNumCell.swift in Sources */,
 				E91793252005EEF800AC0376 /* MBProgressHUD+Extension.m in Sources */,
 				E917932B2005EEF800AC0376 /* UIButton+Extension.swift in Sources */,
+				E9A6843020070E5B00EE82AC /* DistrictModel.swift in Sources */,
 				E91793032005EB6600AC0376 /* BaseTabBarController.swift in Sources */,
-				E91793072005EB7C00AC0376 /* BaseResponseModel.swift in Sources */,
+				E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */,
 				E91793022005EB6600AC0376 /* BaseTableViewController.swift in Sources */,
 				E91792FD2005EAA000AC0376 /* AppDelegate.swift in Sources */,
 				E91793102005EBC000AC0376 /* GlobalConstants.swift in Sources */,
 				E91793042005EB6600AC0376 /* BaseNavigationController.swift in Sources */,
 				E91793272005EEF800AC0376 /* NSDate+Extension.swift in Sources */,
+				E9A684382007137600EE82AC /* MineViewController.swift in Sources */,
 				E91793832006172E00AC0376 /* CommonButton.swift in Sources */,
 				E917930B2005EB9700AC0376 /* CommonTableViewCell.swift in Sources */,
 				E91793112005EBC000AC0376 /* ServerUrl.swift in Sources */,
+				E9A684342007133700EE82AC /* HomeViewController.swift in Sources */,
+				E9A6842E20070E0700EE82AC /* LoginServices.swift in Sources */,
+				E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */,
 				E91793382005F30500AC0376 /* GuideViewController.swift in Sources */,
 				E91793292005EEF800AC0376 /* UIAlertController+Extension.swift in Sources */,
 				E917932D2005EEF800AC0376 /* UIImage+Extension.swift in Sources */,
@@ -748,6 +787,9 @@
 				E917932A2005EEF800AC0376 /* UIBarButtonItem+Extension.swift in Sources */,
 				E91793302005EEF800AC0376 /* UITextField+Extension.swift in Sources */,
 				E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */,
+				E91793892006FBE600AC0376 /* ImageButton.swift in Sources */,
+				E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */,
+				E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */,
 				E917930F2005EBC000AC0376 /* AppConstants.swift in Sources */,
 				E91793312005EEF800AC0376 /* UIView+Extension.swift in Sources */,
 				E9179385200624B100AC0376 /* ForgetPasswordViewController.swift in Sources */,
@@ -946,7 +988,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -997,7 +1039,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -1016,7 +1058,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.weiqitong.SwiftWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWallet/Classes/Common/Utils/BridgeHeader/SwiftWallet-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftWallet/Classes/Common/Utils/BridgeHeader/SwiftWallet-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1033,7 +1075,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.weiqitong.SwiftWallet;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "SwiftWallet/Classes/Common/Utils/BridgeHeader/SwiftWallet-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/SwiftWallet/Classes/Common/Utils/BridgeHeader/SwiftWallet-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

@@ -66,12 +66,12 @@ extension UIButton {
     }
 
     /// 创建一个文字按钮(有背景颜色、圆角、边框)
-    convenience init(title: String?, titleColor: UIColor, highlightedTitleColor: UIColor, font: UIFont, backgroundColor: UIColor, cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor?, target: Any?, selector: Selector) {
+    convenience init(title: String?, titleColor: UIColor, highlightedTitleColor: UIColor, font: UIFont, backgroundColor: UIColor, borderWidth: CGFloat, borderColor: UIColor?, cornerRadius: CGFloat, target: Any?, selector: Selector) {
         self.init(title: title, titleColor: titleColor, highlightedTitleColor: highlightedTitleColor, font: font, target: target, selector: selector)
         self.backgroundColor = backgroundColor
-        self.layer.cornerRadius = cornerRadius
         self.layer.borderWidth = borderWidth
         self.layer.borderColor = borderColor?.cgColor
+        self.layer.cornerRadius = cornerRadius
     }
 
     /// 创建一个文字按钮
@@ -93,10 +93,10 @@ extension UIButton {
     }
 
     /// 创建一个文字按钮(有背景颜色、按下效果、圆角、边框)
-    convenience init(frame: CGRect, title: String?, titleColor: UIColor, font: UIFont, backgroundImage: UIImage, highlightedBackgroundImage: UIImage, cornerRadius: CGFloat, borderWidth: CGFloat, borderColor: UIColor, target: Any?, selector: Selector) {
+    convenience init(frame: CGRect, title: String?, titleColor: UIColor, font: UIFont, backgroundImage: UIImage, highlightedBackgroundImage: UIImage, borderWidth: CGFloat, borderColor: UIColor?, cornerRadius: CGFloat, target: Any?, selector: Selector) {
         self.init(frame: frame, title: title, titleColor: titleColor, font: font, backgroundImage: backgroundImage, highlightedBackgroundImage: highlightedBackgroundImage, cornerRadius: cornerRadius, target: target, selector: selector)
         self.layer.borderWidth = borderWidth
-        self.layer.borderColor = borderColor.cgColor
+        self.layer.borderColor = borderColor?.cgColor
     }
 
     /// 创建一个只有图片的按钮

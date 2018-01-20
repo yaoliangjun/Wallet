@@ -16,4 +16,15 @@ class CommonUtils: NSObject {
         let allLanguages = userDefaults.object(forKey: "AppleLanguages") as! Array<String>
         return allLanguages.first!
     }
+
+    /** 获取当前语言 */
+    static func currentLanguage() -> String {
+        let defaultLanguage = self.defaultLanguage()
+        return defaultLanguage.contains("zh") ? "zh" : "en"
+    }
+
+    /** 获取当前地区代码:CN */
+    static func currentRegionCode() -> String {
+        return Locale.current.regionCode!
+    }
 }

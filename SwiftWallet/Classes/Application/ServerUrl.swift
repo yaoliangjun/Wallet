@@ -20,38 +20,67 @@ class ServerUrl: NSObject {
 
     static func baseUrl() -> String {
         if environment == .develop {
-            return "http://47.52.72.135/newton/dev/api"
+            return "http://47.52.196.46/dev/wallet"
 
         } else {
-            return "http://47.52.142.113:9070"
+            return ""
         }
     }
     
 
     /** 注册登录 */
-    static let login = "/user/login" // 登录
-    static let register = "/user/register" // 注册
-    static let verifyCode = "/user/veri-code" // 获取短信验证码
-    static let findPassword = "/user/forget-pwd" // 忘记登陆密码
-    static let nationals = "/finance/qianbao/nationals" // 获取国家地区区号
+    static let login = "/api/login" // 登录
+    static let register = "/api/registerWithCaptcha" // 注册
+    static let captchaForRegister = "/api/captchaForRegister" // 获取注册短信验证码
+    static let findPassword = "/api/resetPasswordForForget" // 忘记密码
+    static let captchaForForget = "/api/captchaForForet" // 获取忘记密码验证码
+    static let nationals = "/api/nationalCodes" // 获取国家地区区号
+    static let logout = "/api/logout" // 退出登录
+    static let appVersions = "/api/appVersions" // APP版本检查
+
+    /** =========================================== 登录注册接口 =========================================== */
 
 
-    /** 首页 */
-    static let marketSummary = "/market/summary" // 获取当前各币种行情
-    static let messageList = "/amount/notice" // 获取消息列表
+//    #define USER_LOGIN @"/api/login" // 登录
+//    #define USER_REGISTER @"/api/registerWithCaptcha" // 注册
+//    #define USER_REGISTER_GET_VERIFY_CODE @"/api/captchaForRegister" // 获取注册短信验证码
+//    #define USER_LOGOUT @"/api/logout" // 退出登录
+    //    #define USER_NATIONALS @"/api/nationalCodes" // 获取国家地区区号
+    //    #define USER_FORGET_PWD_RESET @"/api/resetPasswordForForget" // 忘记密码
+
+//    #define USER_FORGET_PWD_GET_VERIFY_CODE @"/api/captchaForForet" // 获取忘记密码验证码
+//    #define USER_REGISTER_PROTOCOL @"" // TODO 注册协议
+//    #define USER_GET_APP_VERSION @"/api/appVersions" // APP版本检查
 
 
-    /** 交易 */
-    static let cancelOrderList = "/trade" // 撤单列表
-    static let cancelOrder = "/trade/cancel/%@" // 撤单
-    static let balances = "/finance/coin/getBalances" // 获取买入对应市场的可用余额
-    static let marketQuote = "/market/quote/symbol/%@?tradeType=ALL" // 获取某个币种最新的买单和卖单
-    static let trade = "/trade" // 买入、卖出
-    
-    /** 资讯 */
-    static let infoList = "/info/list" // 获取资讯
+
+    /** =========================================== 设置接口 ============================================== */
 
 
-    /** 账户 */
-    static let myAssets = "/finance/coin/myAssets" //我的资产
+//    #define SETTING_RESET_LOGIN_PWD @"/api/resetPassword" // 重置登录密码
+//    #define SETTING_SET_TRADE_PWD @"/api/resetTradePassword" // 设置交易密码
+//    #define SETTING_GET_TRADE_VERIFY_CODE @"/api/captchaForTrade" // 获取设置交易密码验证码
+//    #define SETTING_UPDATE_TRADE_PWD @"/api/resetTradePassword" // 设置交易密码
+
+
+    /** =========================================== 首页接口 ============================================== */
+
+
+//    #define HOME_MY_WALLET @"/api/myWallet" // 首页钱包信息
+//    #define HOME_ALL_COINS @"/api/coins"    // 获取所有有效币种
+//    #define HOME_ADD_WALLETS @"/api/coinWallet" // 添加钱包
+//    #define HOME_GET_WALLET_ADDRESS @"/api/address" // 获取钱包地址
+//    #define HOME_GET_BALANCE @"/api/balance" // 获取钱包余额
+//    #define HOME_DELETE_WALLET @"/api/disCoinWallet" // 删除钱包
+
+
+    /** =========================================== 转账接口 ============================================== */
+
+
+//    #define TRANSFER_TRANS_OUT @"/api/transOut" // 虚拟币转出
+//    #define TRANSFER_TRANS_HISTORY @"/api/histories" // 交易历史记录
+//    #define TRANSFER_GET_CONTACT_LIST @"/api/queryContacts" // 获取联系人列表
+//    #define TRANSFER_DELETE_CONTACT @"/api/deleteContacts" // 删除联系人
+//    #define TRANSFER_UPDATE_CONTACT @"/api/updateContacts" // 修改联系人
+//    #define TRANSFER_ADD_CONTACT @"/api/addContacts" // 新增联系人
 }

@@ -19,28 +19,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         setupIQKeyboardManager()
 
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.backgroundColor = UIColor.white
+        window?.backgroundColor = GlobalConstants.backgroundColor
         window?.makeKeyAndVisible()
 
-        let hasShowGuidePage = UserDefaults.standard.object(forKey: AppConstants.hasShowGuidePage) as? Bool
-        if let hasShowGuidePage = hasShowGuidePage, hasShowGuidePage {
-            let token = UserDefaults.standard.object(forKey: AppConstants.token) as? String
-            guard let _ = token else {
-                showLoginPage()
-                return true
-            }
-            showMainPage()
+//        let hasShowGuidePage = UserDefaults.standard.object(forKey: AppConstants.hasShowGuidePage) as? Bool
+//        if let hasShowGuidePage = hasShowGuidePage, hasShowGuidePage {
+//            let token = UserDefaults.standard.object(forKey: AppConstants.token) as? String
+//            guard let _ = token else {
+//                showLoginPage()
+//                return true
+//            }
+//            showMainPage()
+//
+//        } else {
+//            showGuidePage()
+//        }
 
-        } else {
-            showGuidePage()
-        }
+        showLoginPage()
 
         return true
     }
 
     // 显示主页面
     func showMainPage() {
-        window?.rootViewController = MainTabBarController()
+        window?.rootViewController = MainTabBarController.sharedMainTabBar()
     }
 
     // 显示登录页

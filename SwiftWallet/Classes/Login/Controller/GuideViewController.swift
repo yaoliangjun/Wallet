@@ -47,7 +47,7 @@ class GuideViewController: BaseViewController, UIScrollViewDelegate {
 
             } else if index == 2 {
                 imageView.isUserInteractionEnabled = true
-                let experienceBtn = UIButton(title: NSLocalizedString("立即体验", comment: ""), titleColor: UIColor.white, highlightedTitleColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), backgroundColor: UIColor.clear, cornerRadius: 4, borderWidth: 0.5,borderColor: UIColor.white, target: self, selector: #selector(experienceBtnClick))
+                let experienceBtn = UIButton(title: NSLocalizedString("立即体验", comment: ""), titleColor: UIColor.white, highlightedTitleColor: UIColor.white, font: UIFont.systemFont(ofSize: 14), backgroundColor: UIColor.clear, borderWidth: 0.5, borderColor: UIColor.white, cornerRadius: 4, target: self, selector: #selector(experienceBtnClick))
                 imageView.addSubview(experienceBtn)
                 experienceBtn.snp.makeConstraints({ (make) in
                     make.width.equalTo(120)

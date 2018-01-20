@@ -19,11 +19,11 @@ class BaseNavigationController: UINavigationController {
     func setupNavigationBarAppearance() {
         // 设置导航栏背景图片和文字颜色大小
         let navigationBar = UINavigationBar.appearance()
-        navigationBar.setBackgroundImage(UIImage.createImage(color: GlobalConstants.navigationBarColor), for: .default)
-        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: AppConstants.goldColor, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 20)]
+        navigationBar.setBackgroundImage(UIImage(named: "navigationbar_background"), for: .default)
+        navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white, NSAttributedStringKey.font: UIFont.systemFont(ofSize: 18)]
         
         // 设置返回键的颜色和隐藏返回文字
-        navigationBar.tintColor = AppConstants.goldColor
+        navigationBar.tintColor = UIColor.white
         let barButtonItem = UIBarButtonItem.appearance()
         barButtonItem.setBackButtonTitlePositionAdjustment(UIOffsetMake(0, -60), for: .default)
         
@@ -41,8 +41,7 @@ class BaseNavigationController: UINavigationController {
         
         super.pushViewController(viewController, animated: animated)
     }
-    
-    
+
     func backArrowClick() {
         
     }
