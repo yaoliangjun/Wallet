@@ -53,7 +53,7 @@ extension HttpManager {
     }
 
     // MARK: 请求基类
-    fileprivate func request<T: HandyJSON>(url: String, method: HTTPMethod, params: Parameters?, showHUD: Bool, success : @escaping (_ response : T?) -> (), failture : @escaping (_ error : Error) -> ()) -> () {
+    fileprivate func request<T: HandyJSON>(url: String, method: HTTPMethod, params: Parameters?, showHUD: Bool, success: @escaping (_ response: T?) -> (), failture: @escaping (_ error: Error) -> ()) -> () {
 
         self.showHUD(showHUD: showHUD)
         let requestUrl = ServerUrl.baseUrl() + url
@@ -67,7 +67,7 @@ extension HttpManager {
 
                 var responseJson = JSON(value).rawString()
                 responseJson = responseJson?.replacingOccurrences(of: "\n", with: "")
-                print("REQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nREQUEST METHOD: \(method) \nRESPONSE: \(responseJson!)\n\n")
+                print("\nREQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nREQUEST METHOD: \(method) \nRESPONSE: \(responseJson!)\n\n")
 
                 let responseModel = ResponseModel<T>.deserialize(from: responseJson)
                 if responseModel?.code == 401 {

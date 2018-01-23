@@ -53,12 +53,8 @@ class LoginViewController: BaseViewController {
             UserDefaults.standard.setValue(token!, forKey: AppConstants.token)
             UserDefaults.standard.setValue(account, forKey: AppConstants.account)
             UserDefaults.standard.synchronize()
-
-            let mainVC = MainTabBarController.sharedMainTabBar().viewControllers?.first
-            UIView.transition(from: self.view, to: mainVC!.view, duration: 0.6, options: .transitionFlipFromRight) { (finished) in
-                (UIApplication.shared.delegate as! AppDelegate).showMainPage()
-            }
-
+            (UIApplication.shared.delegate as! AppDelegate).showMainPage()
+            
         }) { (error) in
 
         }

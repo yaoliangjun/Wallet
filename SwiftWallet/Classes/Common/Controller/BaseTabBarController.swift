@@ -18,7 +18,8 @@ class BaseTabBarController: UITabBarController {
     func setupTabBarAppearance() {
         // 设置背景颜色
         tabBar.barTintColor = GlobalConstants.tabBarColor
-        tabBar.backgroundImage = UIImage(named: "tab_bar_background")
+        tabBar.isTranslucent = false // 去掉半透明效果
+        tabBar.backgroundImage =  UIImage.createImage(color: GlobalConstants.backgroundColor)
         tabBar.shadowImage = UIImage()
 
         // 设置字体和颜色

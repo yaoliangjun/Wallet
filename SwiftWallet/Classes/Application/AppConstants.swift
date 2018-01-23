@@ -10,12 +10,14 @@ import UIKit
 
 class AppConstants: NSObject {
 
+    // APP币种
+    static let appCoinSymbol = "nxx"
+    
     // APP颜色常量值
     static let greyTextColor = UIColor(hexValue: 0x333333) // 灰色文字颜色
     static let lightGreyColor = UIColor(hexValue: 0x999999) // 浅灰色
     static let grayColor = UIColor(hexValue: 0xCCCCCC) // 灰色
     static let goldColor = UIColor(hexValue: 0xFE9D04) // 金色
-
 
 
     static let gapColor = UIColor(hexValue: 0xEDEDED) // 灰色空隙颜色

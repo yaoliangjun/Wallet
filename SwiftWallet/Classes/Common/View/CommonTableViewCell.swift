@@ -15,7 +15,12 @@ class CommonTableViewCell: BaseTableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId) as? CommonTableViewCell
         if cell == nil {
             cell = self.init(style: .default, reuseIdentifier: cellReuseId)
-            cell?.backgroundColor = UIColor.white
+            let backgroundImageView = UIImageView(imageName: "list_background")
+            cell!.backgroundView = backgroundImageView
+            cell?.textLabel?.font = UIFont(15)
+            cell?.textLabel?.textColor = UIColor.white
+            cell?.detailTextLabel?.font = UIFont(10)
+            cell?.detailTextLabel?.textColor = UIColor.white
         }
 
         return cell!

@@ -13,7 +13,6 @@ pod 'Kingfisher', '4.6.1'    #图片下载
 pod 'IQKeyboardManagerSwift', '5.0.7'
 pod 'MBProgressHUD', '1.1.0'
 pod 'SwiftyJSON', '4.0.0'
-pod 'MJExtension', '3.0.13'
 pod 'MJRefresh', '3.1.15.1'
 pod 'HandyJSON', '4.0.0-beta.1'
 

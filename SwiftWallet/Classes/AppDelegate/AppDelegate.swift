@@ -22,32 +22,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = GlobalConstants.backgroundColor
         window?.makeKeyAndVisible()
 
-//        let hasShowGuidePage = UserDefaults.standard.object(forKey: AppConstants.hasShowGuidePage) as? Bool
-//        if let hasShowGuidePage = hasShowGuidePage, hasShowGuidePage {
-//            let token = UserDefaults.standard.object(forKey: AppConstants.token) as? String
-//            guard let _ = token else {
-//                showLoginPage()
-//                return true
-//            }
-//            showMainPage()
-//
-//        } else {
-//            showGuidePage()
-//        }
+        let hasShowGuidePage = UserDefaults.standard.object(forKey: AppConstants.hasShowGuidePage) as? Bool
+        if let hasShowGuidePage = hasShowGuidePage, hasShowGuidePage {
+            let token = UserDefaults.standard.object(forKey: AppConstants.token) as? String
+            guard let _ = token else {
+                showLoginPage()
+                return true
+            }
+            showMainPage()
 
-        showLoginPage()
+        } else {
+            showGuidePage()
+        }
 
         return true
     }
 
     // 显示主页面
     func showMainPage() {
-        window?.rootViewController = MainTabBarController.sharedMainTabBar()
+        window?.rootViewController = nil
+        window?.rootViewController = MainTabBarController()
     }
 
     // 显示登录页
     func showLoginPage() {
         let navigationController = BaseNavigationController(rootViewController: LoginViewController())
+        window?.rootViewController = nil
         window?.rootViewController = navigationController
     }
 

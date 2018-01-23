@@ -29,7 +29,7 @@ class BaseTableViewController: BaseViewController {
         let tableView = UITableView(frame: frame, style: style)
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
-        tableView.backgroundColor = AppConstants.gapColor
+        tableView.backgroundColor = GlobalConstants.backgroundColor
         return tableView
     }
 
