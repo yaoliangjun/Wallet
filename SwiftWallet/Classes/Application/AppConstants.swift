@@ -11,7 +11,7 @@ import UIKit
 class AppConstants: NSObject {
 
     // APP币种
-    static let appCoinSymbol = "nxx"
+    static let appCoinSymbol = "ddl"
     
     // APP颜色常量值
     static let greyTextColor = UIColor(hexValue: 0x333333) // 灰色文字颜色
@@ -26,6 +26,7 @@ class AppConstants: NSObject {
     
     // 字符串常量
     static let token = "token"
+    static let hasTradePassword = "hasTradePassword"
     static let account = "account"
     static let startGetVerifyCode = "startGetVerifyCode"
     static let hasShowGuidePage = "hasShowGuidePage"

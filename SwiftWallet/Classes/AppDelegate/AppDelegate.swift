@@ -71,3 +71,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+/// 全局Logger
+func Logger<T>(_ messsage: T) {
+
+    #if DEBUG
+        print(messsage)
+    #endif
+}

@@ -49,10 +49,17 @@ class LoginViewController: BaseViewController {
 
         let params = ["mobile": mobile, "password": password!.md5(), "language": CommonUtils.currentLanguage()]
         LoginServices.login(params: params, showHUD: true, success: { (response) in
-            let token = response?["token"]
-            UserDefaults.standard.setValue(token!, forKey: AppConstants.token)
-            UserDefaults.standard.setValue(account, forKey: AppConstants.account)
-            UserDefaults.standard.synchronize()
+            let token = response?[AppConstants.token] as? String
+            let hasTradePassword = response?[AppConstants.hasTradePassword] as? Bool
+
+            UserInfoManager.saveAccount(account)
+            UserInfoManager.saveToken(token)
+            UserInfoManager.saveHasTradePassword(hasTradePassword)
+
+//            UserDefaults.standard.setValue(hasTradePassword!, forKey: AppConstants.hasTradePassword)
+//            UserDefaults.standard.setValue(token!, forKey: AppConstants.token)
+//            UserDefaults.standard.setValue(account, forKey: AppConstants.account)
+//            UserDefaults.standard.synchronize()
             (UIApplication.shared.delegate as! AppDelegate).showMainPage()
             
         }) { (error) in

@@ -10,12 +10,36 @@ import UIKit
 
 class MineViewController: BaseTableViewController {
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    // MARK: - Private Method
+    @objc fileprivate func logoutBtnClick() {
+        let alertController = UIAlertController(title: NSLocalizedString("提示", comment: ""), message: NSLocalizedString("确定要退出登录吗?", comment: ""), preferredStyle: .alert, positiveActionTitle: NSLocalizedString("确定", comment: ""), positiveCompletionHandle: { (alert) in
+            (UIApplication.shared.delegate as! AppDelegate).logout()
+
+        }, negativeActionTitle: NSLocalizedString("取消", comment: "")) { (alert) in
+
+        }
+        self.present(alertController, animated: true, completion: nil)
+    }
+
+    // MARK: - Getter / Setter
+    override func setupSubViews() {
+        tableView = createTableView(delegate: self, style: .plain)
+        tableView?.tableFooterView = tableFooterView
+        view.addSubview(tableView!)
+    }
+
     fileprivate var titleArray: [String] = {
         var titleArray = ["", // 账号
-                          NSLocalizedString("登录密码", comment: ""),
-                          NSLocalizedString("交易密码", comment: ""),
-                          NSLocalizedString("关于NXX钱包", comment: ""),
-                          NSLocalizedString("更新检查", comment: "")]
+            NSLocalizedString("登录密码", comment: ""),
+            NSLocalizedString("交易密码", comment: ""),
+            NSLocalizedString("关于NXX钱包", comment: ""),
+            NSLocalizedString("更新检查", comment: "")]
         return titleArray
     }()
 
@@ -41,30 +65,6 @@ class MineViewController: BaseTableViewController {
 
         return tableFooterView
     }()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    // MARK: - Private Method
-    @objc func logoutBtnClick() {
-        let alertController = UIAlertController(title: NSLocalizedString("提示", comment: ""), message: NSLocalizedString("确定要退出登录吗?", comment: ""), preferredStyle: .alert, positiveActionTitle: NSLocalizedString("确定", comment: ""), positiveCompletionHandle: { (alert) in
-            (UIApplication.shared.delegate as! AppDelegate).logout()
-
-        }, negativeActionTitle: NSLocalizedString("取消", comment: "")) { (alert) in
-
-        }
-        self.present(alertController, animated: true, completion: nil)
-    }
-
-    // MARK: - Getter / Setter
-    override func setupSubViews() {
-        tableView = createTableView(delegate: self, style: .plain)
-        tableView?.tableFooterView = tableFooterView
-        view.addSubview(tableView!)
-    }
 }
 
 extension MineViewController {

@@ -21,5 +21,5 @@ class GlobalConstants: NSObject {
     static let tabBarColor = navigationBarColor // TabBar背景颜色
     static let lineColor = UIColor(hexValue: 0xCCCCCC) // 分割线颜色
     static let backgroundColor = UIColor(hexValue: 0x1A191A)  // 页面背景颜色
-    static let placeholderColor = UIColor(hexValue: 0x999999)
+    static let placeholderColor = UIColor(hexValue: 0xCCCCCC)
 }

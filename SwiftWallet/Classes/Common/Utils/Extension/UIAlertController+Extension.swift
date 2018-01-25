@@ -11,7 +11,7 @@ import Foundation
 extension UIAlertController {
 
     /// UIAlertController: 有确定、取消两个按钮
-    convenience init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, positiveActionTitle: String, positiveCompletionHandle: @escaping (_ alert: UIAlertController) -> (), negativeActionTitle: String, negativeCompletionHandle: @escaping (_ alert: UIAlertController) -> ()) {
+    convenience init(title: String?, message: String?, preferredStyle: UIAlertControllerStyle, positiveActionTitle: String, positiveCompletionHandle: @escaping (_ alert: UIAlertController) -> (), negativeActionTitle: String, negativeCompletionHandle: ((_ alert: UIAlertController) -> ())?) {
         self.init(title: title, message: message, preferredStyle: preferredStyle)
 
         let positiveAction = UIAlertAction(title: positiveActionTitle, style: .default) { (action) in
@@ -20,7 +20,9 @@ extension UIAlertController {
         self.addAction(positiveAction)
 
         let negativeAction = UIAlertAction(title: negativeActionTitle, style: .cancel) { (action) in
-            negativeCompletionHandle(self)
+            if negativeCompletionHandle != nil {
+                negativeCompletionHandle!(self)
+            }
         }
         self.addAction(negativeAction)
     }

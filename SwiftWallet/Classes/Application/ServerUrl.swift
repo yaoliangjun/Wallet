@@ -16,11 +16,11 @@ class ServerUrl: NSObject {
         case production
     }
 
-    static let environment = Environment.production
+    static let environment = Environment.develop
 
     static func baseUrl() -> String {
         if environment == .develop {
-            return "http://47.52.196.46/dev/wallet"
+            return "http://47.75.12.155:8011" //http://47.52.196.46/dev/wallet"
 
         } else {
             return "http://nxx.one:8088"
@@ -76,8 +76,8 @@ class ServerUrl: NSObject {
 
     /** =========================================== 转账接口 ============================================== */
 
+    static let transOut = "/api/transOut" // 虚拟币转出
 
-//    #define TRANSFER_TRANS_OUT @"/api/transOut" // 虚拟币转出
 //    #define TRANSFER_TRANS_HISTORY @"/api/histories" // 交易历史记录
 //    #define TRANSFER_GET_CONTACT_LIST @"/api/queryContacts" // 获取联系人列表
 //    #define TRANSFER_DELETE_CONTACT @"/api/deleteContacts" // 删除联系人

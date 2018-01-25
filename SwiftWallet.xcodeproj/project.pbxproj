@@ -61,6 +61,9 @@
 		E92F1A99201713510035E2C2 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F1A98201713510035E2C2 /* HomeServices.swift */; };
 		E92F1A9B201713C40035E2C2 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F1A9A201713C40035E2C2 /* BalanceModel.swift */; };
 		E95817632015967E001DF686 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95817622015967E001DF686 /* UIDevice+Extension.swift */; };
+		E95E453B201874DC00ED59C3 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E453A201874DC00ED59C3 /* UserInfoManager.swift */; };
+		E95E453D201884AD00ED59C3 /* ChangeTradePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E453C201884AD00ED59C3 /* ChangeTradePasswordViewController.swift */; };
+		E95E453F2018874A00ED59C3 /* TransferServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E453E2018874A00ED59C3 /* TransferServices.swift */; };
 		E99C72F220172CC8006D24BF /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C72F120172CC8006D24BF /* ExchangeViewController.swift */; };
 		E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */; };
 		E9A6842E20070E0700EE82AC /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842D20070E0700EE82AC /* LoginServices.swift */; };
@@ -70,6 +73,10 @@
 		E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A684352007135F00EE82AC /* TransferViewController.swift */; };
 		E9A684382007137600EE82AC /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A684372007137600EE82AC /* MineViewController.swift */; };
 		E9A6843C20088B2F00EE82AC /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6843B20088B2F00EE82AC /* ResponseModel.swift */; };
+		E9EE2EBF20183E1000AC80D4 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EE2EBE20183E1000AC80D4 /* CommonView.swift */; };
+		E9F3AC722019C98E00E98DC4 /* DateSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */; };
+		E9F3AC742019D7DA00E98DC4 /* GlobalEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */; };
+		E9FBA40820181F7B00A315E0 /* CommonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -157,6 +164,9 @@
 		E92F1A98201713510035E2C2 /* HomeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
 		E92F1A9A201713C40035E2C2 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		E95817622015967E001DF686 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		E95E453A201874DC00ED59C3 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
+		E95E453C201884AD00ED59C3 /* ChangeTradePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTradePasswordViewController.swift; sourceTree = "<group>"; };
+		E95E453E2018874A00ED59C3 /* TransferServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferServices.swift; sourceTree = "<group>"; };
 		E99C72F120172CC8006D24BF /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictNumViewController.swift; sourceTree = "<group>"; };
 		E9A6842D20070E0700EE82AC /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
@@ -166,6 +176,10 @@
 		E9A684352007135F00EE82AC /* TransferViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewController.swift; sourceTree = "<group>"; };
 		E9A684372007137600EE82AC /* MineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
 		E9A6843B20088B2F00EE82AC /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		E9EE2EBE20183E1000AC80D4 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
+		E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchView.swift; sourceTree = "<group>"; };
+		E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnum.swift; sourceTree = "<group>"; };
+		E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextFieldView.swift; sourceTree = "<group>"; };
 		F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -252,9 +266,10 @@
 		E91792DD2005E7D400AC0376 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				E917930E2005EBC000AC0376 /* ServerUrl.swift */,
 				E917930C2005EBC000AC0376 /* AppConstants.swift */,
 				E917930D2005EBC000AC0376 /* GlobalConstants.swift */,
-				E917930E2005EBC000AC0376 /* ServerUrl.swift */,
+				E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -308,6 +323,8 @@
 				E91793082005EB9600AC0376 /* BaseTableViewCell.swift */,
 				E91793092005EB9600AC0376 /* CommonTableViewCell.swift */,
 				E91793822006172E00AC0376 /* CommonButton.swift */,
+				E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */,
+				E9EE2EBE20183E1000AC80D4 /* CommonView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -352,6 +369,7 @@
 		E91792E72005E7D400AC0376 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -450,6 +468,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A684372007137600EE82AC /* MineViewController.swift */,
+				E95E453C201884AD00ED59C3 /* ChangeTradePasswordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -512,6 +531,7 @@
 		E91792FA2005E7D400AC0376 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E95E453E2018874A00ED59C3 /* TransferServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -544,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				E91793182005EEF800AC0376 /* HttpManager.swift */,
+				E95E453A201874DC00ED59C3 /* UserInfoManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -766,7 +787,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E917933A2005F34B00AC0376 /* MainTabBarController.swift in Sources */,
+				E9F3AC742019D7DA00E98DC4 /* GlobalEnum.swift in Sources */,
 				E91793362005F2F200AC0376 /* LoginViewController.swift in Sources */,
+				E9EE2EBF20183E1000AC80D4 /* CommonView.swift in Sources */,
 				E91793342005EF8B00AC0376 /* CommonUtils.swift in Sources */,
 				E91793282005EEF800AC0376 /* String+Extension.swift in Sources */,
 				E92F1A9B201713C40035E2C2 /* BalanceModel.swift in Sources */,
@@ -782,6 +805,7 @@
 				E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */,
 				E91793022005EB6600AC0376 /* BaseTableViewController.swift in Sources */,
 				E91792FD2005EAA000AC0376 /* AppDelegate.swift in Sources */,
+				E9FBA40820181F7B00A315E0 /* CommonTextFieldView.swift in Sources */,
 				E91793102005EBC000AC0376 /* GlobalConstants.swift in Sources */,
 				E91793042005EB6600AC0376 /* BaseNavigationController.swift in Sources */,
 				E91793272005EEF800AC0376 /* NSDate+Extension.swift in Sources */,
@@ -794,6 +818,7 @@
 				E9A6842E20070E0700EE82AC /* LoginServices.swift in Sources */,
 				E95817632015967E001DF686 /* UIDevice+Extension.swift in Sources */,
 				E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */,
+				E9F3AC722019C98E00E98DC4 /* DateSearchView.swift in Sources */,
 				E91793382005F30500AC0376 /* GuideViewController.swift in Sources */,
 				E91793292005EEF800AC0376 /* UIAlertController+Extension.swift in Sources */,
 				E917932D2005EEF800AC0376 /* UIImage+Extension.swift in Sources */,
@@ -805,13 +830,16 @@
 				E91793302005EEF800AC0376 /* UITextField+Extension.swift in Sources */,
 				E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */,
 				E91793892006FBE600AC0376 /* ImageButton.swift in Sources */,
+				E95E453B201874DC00ED59C3 /* UserInfoManager.swift in Sources */,
 				E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */,
 				E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */,
 				E917930F2005EBC000AC0376 /* AppConstants.swift in Sources */,
+				E95E453F2018874A00ED59C3 /* TransferServices.swift in Sources */,
 				E91793312005EEF800AC0376 /* UIView+Extension.swift in Sources */,
 				E99C72F220172CC8006D24BF /* ExchangeViewController.swift in Sources */,
 				E9179385200624B100AC0376 /* ForgetPasswordViewController.swift in Sources */,
 				E917932C2005EEF800AC0376 /* UIColor+Extension.swift in Sources */,
+				E95E453D201884AD00ED59C3 /* ChangeTradePasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

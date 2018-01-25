@@ -4,7 +4,7 @@
 //
 //  Created by yaoliangjun on 2018/1/11.
 //  Copyright © 2018年 Jerry Yao. All rights reserved.
-//
+//  主页
 
 import UIKit
 
@@ -17,22 +17,23 @@ class HomeViewController: BaseViewController {
         fetchBalance()
     }
 
-    // MARK: - Private Method
-    func fetchBalance() {
+    // MARK: - HTTP
+    fileprivate func fetchBalance() {
         let params = ["coinSymbol": AppConstants.appCoinSymbol]
         HomeServices.balance(params: params, showHUD: true, success: { (response) in
-            self.balanceLabel?.text = String(format: "%.5f", (response?.useable)!)
+            self.balanceLabel?.text = response?.useable.defaultDecimalPoint()
 
         }) { (error) in
 
         }
     }
 
-    @objc func transferBtnClick() {
+    // MARK: - Private Method
+    @objc fileprivate func transferBtnClick() {
         navigationController?.pushViewController(ExchangeViewController(), animated: true)
     }
 
-    @objc func transHistoryBtnClick() {
+    @objc fileprivate func transHistoryBtnClick() {
         navigationController?.pushViewController(TransHistoryViewController(), animated: true)
     }
 
@@ -55,9 +56,9 @@ class HomeViewController: BaseViewController {
         }
 
         // Banner
-        var bannerViewHeight = 290
+        var bannerViewHeight = 280
         if UIDevice.matchSize(4.7) {
-            bannerViewHeight = 250
+            bannerViewHeight = 240
 
         } else if UIDevice.matchSize(3.5) || UIDevice.matchSize(4) {
             bannerViewHeight = 220

@@ -51,4 +51,33 @@ extension String: HandyJSON {
 
         return str
     }
+
+    /** 判断是否为整形 */
+    func isPureInt() -> Bool {
+        var value: Int = 0
+        let scanner = Scanner(string: self)
+        return scanner.scanInt(&value) && scanner.isAtEnd
+    }
+
+    /** 判断是否为浮点形 */
+    func isPureFloat() -> Bool {
+        var value: Float = 0
+        let scanner = Scanner(string: self)
+        return scanner.scanFloat(&value) && scanner.isAtEnd
+    }
+
+    /** 字符串保留小数点 */
+    func decimalPoint(_ count: Int) -> String {
+        if self.count <= 0 || (!isPureInt() && !isPureFloat()) {
+            return "0"
+        }
+
+        let format = String(format: "%%.%df", count)
+        return String(format: format, Double(self)!)
+    }
+
+    /** 获取字符串默认保留小数点 */
+    func defaultDecimalPoint() -> String {
+        return decimalPoint(5)
+    }
 }
