@@ -15,10 +15,16 @@ extension UILabel {
     convenience init(text: String?, textColor: UIColor?, font: UIFont?) {
         self.init(text: text, textAlignment: .left, textColor: textColor, font: font)
     }
-    
-    /// 创建一个普通的UILabel(有对齐方式)
+
+    /// 创建一个UILabel(有对齐方式)
     convenience init(text: String?, textAlignment: NSTextAlignment, textColor: UIColor?, font: UIFont?) {
         self.init(frame: CGRect.zero, text: text, textAlignment: textAlignment, textColor: textColor, font: font)
+    }
+
+    /// 创建一个UILabel(有行数)
+    convenience init(text: String?, textColor: UIColor?, font: UIFont?, numberOfLines: Int) {
+        self.init(text: text, textAlignment: .left, textColor: textColor, font: font)
+        self.numberOfLines = numberOfLines
     }
 
     /// 创建一个有背景颜色的UILabel

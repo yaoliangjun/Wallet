@@ -10,6 +10,8 @@ import UIKit
 
 class BaseViewController: UIViewController {
 
+    var placeholderView: PlaceholderView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBaseViewController()

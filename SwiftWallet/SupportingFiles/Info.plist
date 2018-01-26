@@ -69,13 +69,13 @@
 		</dict>
 		<dict>
 			<key>UILaunchImageMinimumOSVersion</key>
-			<string>9.0</string>
+			<string>11.0</string>
 			<key>UILaunchImageName</key>
 			<string>Default-iOS11-812h</string>
 			<key>UILaunchImageOrientation</key>
 			<string>Portrait</string>
 			<key>UILaunchImageSize</key>
-			<string></string>
+			<string>{375, 812}</string>
 		</dict>
 	</array>
 	<key>UIRequiredDeviceCapabilities</key>

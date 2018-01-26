@@ -58,7 +58,7 @@ class HomeViewController: BaseViewController {
         // Banner
         var bannerViewHeight = 280
         if UIDevice.matchSize(4.7) {
-            bannerViewHeight = 240
+            bannerViewHeight = 260
 
         } else if UIDevice.matchSize(3.5) || UIDevice.matchSize(4) {
             bannerViewHeight = 220

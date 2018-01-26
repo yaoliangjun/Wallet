@@ -34,8 +34,17 @@ class DateSearchView: UIView {
         }
     }
 
+    // 日期选取器值改变的响应事件
     @objc fileprivate func datePickerValueChanged(datePicker: UIDatePicker) {
+        let selectedDate = datePicker.date
+        let dateStr = NSDate.dateString(date: selectedDate, GlobalEnum.DateFormatter.yyyymmdd.rawValue)
 
+        if startDateTextField!.isFirstResponder {
+            startDateTextField?.text = dateStr
+
+        } else if endDateTextField!.isFirstResponder {
+            endDateTextField?.text  = dateStr
+        }
     }
 
     // MARK: - Getter / Setter
@@ -54,7 +63,6 @@ class DateSearchView: UIView {
             make.left.equalTo(contentView).offset(10)
             make.centerY.equalTo(contentView)
             make.height.equalTo(20)
-            make.width.lessThanOrEqualTo(65).priority(700)
         }
 
         let startDateLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))
@@ -107,6 +115,7 @@ class DateSearchView: UIView {
 
     fileprivate lazy var datePicker: UIDatePicker = {
         var datePicker = UIDatePicker()
+        datePicker.backgroundColor = UIColor.white
         datePicker.timeZone = NSTimeZone.local
         datePicker.date = Date()
         datePicker.datePickerMode = .date

@@ -121,21 +121,22 @@ extension HttpManager {
             }
 
         } else if errorCode == -1004 {
-            if errorMessage.contains("未能连接到服务器") {
+            if errorMessage.contains("未能连接到服务器") ||
+               errorMessage.contains("Could not connect to the server") {
                 MBProgressHUD.show(withStatus: NSLocalizedString("未能连接到服务器", comment: ""))
                 return;
             }
 
         } else if errorCode == -1005 {
             if errorMessage.contains("网络连接已中断") ||
-                errorMessage.contains("The network connection was lost") {
+               errorMessage.contains("The network connection was lost") {
                 MBProgressHUD.show(withStatus: NSLocalizedString("网络连接已中断", comment: ""))
                 return;
             }
 
         } else if errorCode == -1009 {
             if errorMessage.contains("似乎已断开与互联网的连接") ||
-                errorMessage.contains("The Internet connection appears to be offline") {
+               errorMessage.contains("The Internet connection appears to be offline") {
                 MBProgressHUD.show(withStatus: NSLocalizedString("无网络连接", comment: ""))
                 return;
             }

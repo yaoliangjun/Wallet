@@ -58,6 +58,9 @@
 		E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9179386200624D500AC0376 /* RegisterViewController.swift */; };
 		E91793892006FBE600AC0376 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793882006FBE600AC0376 /* ImageButton.swift */; };
 		E92710CE20172E7F009BEEAA /* TransHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92710CD20172E7F009BEEAA /* TransHistoryViewController.swift */; };
+		E92D12AE201AFCE9007B4445 /* TransHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12AD201AFCE9007B4445 /* TransHistoryCell.swift */; };
+		E92D12B0201B0B66007B4445 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12AF201B0B66007B4445 /* PlaceholderView.swift */; };
+		E92D12B2201B1AFE007B4445 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12B1201B1AFE007B4445 /* BaseModel.swift */; };
 		E92F1A99201713510035E2C2 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F1A98201713510035E2C2 /* HomeServices.swift */; };
 		E92F1A9B201713C40035E2C2 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F1A9A201713C40035E2C2 /* BalanceModel.swift */; };
 		E95817632015967E001DF686 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95817622015967E001DF686 /* UIDevice+Extension.swift */; };
@@ -76,6 +79,7 @@
 		E9EE2EBF20183E1000AC80D4 /* CommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9EE2EBE20183E1000AC80D4 /* CommonView.swift */; };
 		E9F3AC722019C98E00E98DC4 /* DateSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */; };
 		E9F3AC742019D7DA00E98DC4 /* GlobalEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */; };
+		E9F3AC76201ADE2200E98DC4 /* TransHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */; };
 		E9FBA40820181F7B00A315E0 /* CommonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */; };
 /* End PBXBuildFile section */
 
@@ -161,6 +165,9 @@
 		E9179386200624D500AC0376 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E91793882006FBE600AC0376 /* ImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
 		E92710CD20172E7F009BEEAA /* TransHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryViewController.swift; sourceTree = "<group>"; };
+		E92D12AD201AFCE9007B4445 /* TransHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryCell.swift; sourceTree = "<group>"; };
+		E92D12AF201B0B66007B4445 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
+		E92D12B1201B1AFE007B4445 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E92F1A98201713510035E2C2 /* HomeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
 		E92F1A9A201713C40035E2C2 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		E95817622015967E001DF686 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -179,6 +186,7 @@
 		E9EE2EBE20183E1000AC80D4 /* CommonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonView.swift; sourceTree = "<group>"; };
 		E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchView.swift; sourceTree = "<group>"; };
 		E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnum.swift; sourceTree = "<group>"; };
+		E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryModel.swift; sourceTree = "<group>"; };
 		E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextFieldView.swift; sourceTree = "<group>"; };
 		F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -301,6 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A6843B20088B2F00EE82AC /* ResponseModel.swift */,
+				E92D12B1201B1AFE007B4445 /* BaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -319,12 +328,14 @@
 		E91792E22005E7D400AC0376 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */,
 				E91793882006FBE600AC0376 /* ImageButton.swift */,
 				E91793082005EB9600AC0376 /* BaseTableViewCell.swift */,
 				E91793092005EB9600AC0376 /* CommonTableViewCell.swift */,
 				E91793822006172E00AC0376 /* CommonButton.swift */,
 				E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */,
 				E9EE2EBE20183E1000AC80D4 /* CommonView.swift */,
+				E92D12AF201B0B66007B4445 /* PlaceholderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -369,7 +380,7 @@
 		E91792E72005E7D400AC0376 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */,
+				E92D12AD201AFCE9007B4445 /* TransHistoryCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -524,6 +535,7 @@
 		E91792F92005E7D400AC0376 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -801,6 +813,7 @@
 				E91793252005EEF800AC0376 /* MBProgressHUD+Extension.m in Sources */,
 				E917932B2005EEF800AC0376 /* UIButton+Extension.swift in Sources */,
 				E9A6843020070E5B00EE82AC /* DistrictModel.swift in Sources */,
+				E9F3AC76201ADE2200E98DC4 /* TransHistoryModel.swift in Sources */,
 				E91793032005EB6600AC0376 /* BaseTabBarController.swift in Sources */,
 				E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */,
 				E91793022005EB6600AC0376 /* BaseTableViewController.swift in Sources */,
@@ -812,6 +825,7 @@
 				E9A684382007137600EE82AC /* MineViewController.swift in Sources */,
 				E91793832006172E00AC0376 /* CommonButton.swift in Sources */,
 				E917930B2005EB9700AC0376 /* CommonTableViewCell.swift in Sources */,
+				E92D12AE201AFCE9007B4445 /* TransHistoryCell.swift in Sources */,
 				E91793112005EBC000AC0376 /* ServerUrl.swift in Sources */,
 				E92710CE20172E7F009BEEAA /* TransHistoryViewController.swift in Sources */,
 				E9A684342007133700EE82AC /* HomeViewController.swift in Sources */,
@@ -830,10 +844,12 @@
 				E91793302005EEF800AC0376 /* UITextField+Extension.swift in Sources */,
 				E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */,
 				E91793892006FBE600AC0376 /* ImageButton.swift in Sources */,
+				E92D12B2201B1AFE007B4445 /* BaseModel.swift in Sources */,
 				E95E453B201874DC00ED59C3 /* UserInfoManager.swift in Sources */,
 				E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */,
 				E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */,
 				E917930F2005EBC000AC0376 /* AppConstants.swift in Sources */,
+				E92D12B0201B0B66007B4445 /* PlaceholderView.swift in Sources */,
 				E95E453F2018874A00ED59C3 /* TransferServices.swift in Sources */,
 				E91793312005EEF800AC0376 /* UIView+Extension.swift in Sources */,
 				E99C72F220172CC8006D24BF /* ExchangeViewController.swift in Sources */,

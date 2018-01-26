@@ -69,25 +69,49 @@ extension UIDevice {
         }
     }
 
-    static func matchSize(_ size: Float) -> Bool {
+    /// 判断屏幕尺寸
+    static func matchSize(_ size: Double) -> Bool {
+        let screenWidth = UIScreen.main.bounds.width
+        let screenHeight = UIScreen.main.bounds.height
+        
         if size == 3.5 {
-            return iPhone4() || iPhone4s()
+            return (screenWidth, screenHeight) == (320, 480) || (screenWidth, screenHeight) == (480, 320)
 
         } else if size == 4 {
-            return iPhone5() || iPhone5c() || iPhone5s() || iPhone5se()
+            return (screenWidth, screenHeight) == (320, 568) || (screenWidth, screenHeight) == (568, 320)
 
         } else if size == 4.7 {
-            return iPhone6() || iPhone6s() || iPhone7() || iPhone8()
+            return (screenWidth, screenHeight) == (375, 667) || (screenWidth, screenHeight) == (667, 375)
 
         } else if size == 5.5 {
-            return iPhone6p() || iPhone6sp() || iPhone7p() || iPhone8p()
+            return (screenWidth, screenHeight) == (414, 736) || (screenWidth, screenHeight) == (736, 414)
 
         } else if size == 5.8 {
-            return iPhoneX()
+            return (screenWidth, screenHeight) == (375, 812) || (screenWidth, screenHeight) == (812, 375)
         }
 
         return false
     }
+
+//    static func matchSize(_ size: Double) -> Bool {
+//        if size == 3.5 {
+//            return iPhone4() || iPhone4s()
+//
+//        } else if size == 4 {
+//            return iPhone5() || iPhone5c() || iPhone5s() || iPhone5se()
+//
+//        } else if size == 4.7 {
+//            return iPhone6() || iPhone6s() || iPhone7() || iPhone8()
+//
+//        } else if size == 5.5 {
+//            return iPhone6p() || iPhone6sp() || iPhone7p() || iPhone8p()
+//
+//        } else if size == 5.8 {
+//            return iPhoneX()
+//        }
+//
+//        return false
+//    }
 
     static func simulator() -> Bool {
         if modelName == "i386" ||

@@ -20,6 +20,7 @@ extension UITextField {
         self.font = font
         self.autocorrectionType = .no
         self.autocapitalizationType = .none
+        self.clearButtonMode = .whileEditing
     }
 
     /// 创建一个UITextField(有对齐方式)
