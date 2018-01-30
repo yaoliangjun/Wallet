@@ -76,11 +76,10 @@ class ServerUrl: NSObject {
 
     /** =========================================== 转账接口 ============================================== */
 
-    static let transOut = "/api/transOut" // 虚拟币转出
-    static let transHistories = "/api/histories" // 交易历史记录
-
-//    #define TRANSFER_GET_CONTACT_LIST @"/api/queryContacts" // 获取联系人列表
-//    #define TRANSFER_DELETE_CONTACT @"/api/deleteContacts" // 删除联系人
-//    #define TRANSFER_UPDATE_CONTACT @"/api/updateContacts" // 修改联系人
-//    #define TRANSFER_ADD_CONTACT @"/api/addContacts" // 新增联系人
+    static let transOut = "/api/transOut"            // 虚拟币转出
+    static let transHistories = "/api/histories"     // 交易历史记录
+    static let contactList = "/api/queryContacts"    // 获取联系人列表
+    static let deleteContact = "/api/deleteContacts" // 删除联系人
+    static let updateContact = "/api/updateContacts" // 修改联系人
+    static let addContact = "/api/addContacts"       // 新增联系人
 }

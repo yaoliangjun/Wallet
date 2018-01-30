@@ -102,7 +102,7 @@ extension TransHistoryViewController: DateSearchViewDelegate {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = TransHistoryCell.cellWithTableView(tableView: tableView) as! TransHistoryCell
+        let cell = TransHistoryCell.cellWithTableView(tableView) as! TransHistoryCell
         cell.setupModel(transHistoryModel: transHistoryArray[indexPath.row])
         return cell
     }

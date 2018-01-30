@@ -29,4 +29,14 @@ class TransferServices: NSObject {
             failure(error)
         }
     }
+
+    /** 联系人列表 */
+    static func contactList(params: [String: Any]?, showHUD: Bool, success: @escaping (_ response: [ContactModel]?) -> (), failure: @escaping (_ error: Error) -> ()) {
+        HttpManager.sharedManager.get(url: ServerUrl.contactList, params: params, showHUD: showHUD, success: { (response) in
+            success(response)
+
+        }) { (error) in
+            failure(error)
+        }
+    }
 }

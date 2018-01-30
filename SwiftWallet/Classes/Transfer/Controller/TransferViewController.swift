@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class TransferViewController: BaseTableViewController {
 
@@ -22,16 +23,87 @@ class TransferViewController: BaseTableViewController {
     fileprivate var remarkTextField: UITextField?
     fileprivate var copyingBtn: CommonButton?
     fileprivate var downloadBtn: CommonButton?
+    fileprivate var balanceModel: BalanceModel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchBalance()
+    }
 
-        // Do any additional setup after loading the view.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+    // MARK: - HTTP
+    fileprivate func fetchBalance() {
+        let params = ["coinSymbol": AppConstants.appCoinSymbol]
+        HomeServices.balance(params: params, showHUD: true, success: { (response) in
+            self.balanceModel = response
+            self.balanceLabel?.text = response?.useable.defaultDecimalPoint()
+
+        }) { (error) in
+
+        }
     }
 
     // MARK: - Private Method
     @objc fileprivate func confirmBtnClick() {
+        let address = addressTextField?.text
+        if (address?.isEmpty)! {
+            MBProgressHUD.show(withStatus: NSLocalizedString("请输入转至交易所地址或扫码", comment: ""))
+            return
+        }
 
+        let amount = amountTextField?.text
+        if (amount?.isEmpty)! {
+            MBProgressHUD.show(withStatus: NSLocalizedString("请输入转至交易所数额", comment: ""))
+            return
+        }
+
+        if (amount?.starts(with: "."))! {
+            MBProgressHUD.show(withStatus: NSLocalizedString("请输入合法的数额", comment: ""))
+            return
+        }
+
+        if Double(amount!)! > Double((balanceModel?.useable)!)! {
+            MBProgressHUD.show(withStatus: NSLocalizedString("余额不足", comment: ""))
+            return
+        }
+
+        // 判断是否设置了交易密码
+        if !UserInfoManager.hasTradePassword() {
+            view.endEditing(true)
+            let alertController = UIAlertController(title: NSLocalizedString("设置交易密码", comment: ""), message: NSLocalizedString("您尚未设置交易密码, 是否前往设置?", comment: ""), preferredStyle: .alert, positiveActionTitle: NSLocalizedString("确定", comment: ""), positiveCompletionHandle: { (alert) in
+                self.navigationController?.pushViewController(ChangeTradePasswordViewController(), animated: true)
+
+            }, negativeActionTitle: NSLocalizedString("取消", comment: ""), negativeCompletionHandle: nil)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
+
+        let tradePassword = walletPwdTextField?.text
+        if (tradePassword?.isEmpty)! {
+            MBProgressHUD.show(withStatus: NSLocalizedString("请输入交易密码", comment: ""))
+            return
+        }
+
+        let nickName = receiverTextField?.text
+        let remark = remarkTextField?.text
+        view.endEditing(true)
+
+        let params = ["coinSymbol": AppConstants.appCoinSymbol, "toAddress": address!, "amount": amount!, "tradePassword": tradePassword!.md5(), "nickName": nickName ?? "", "remark": remark ?? ""]
+        TransferServices.transOut(params: params, showHUD: true, success: { (response) in
+            MBProgressHUD.show(withStatus: NSLocalizedString("转账成功", comment: ""), completionHandle: {
+                self.addressTextField?.text = nil
+                self.amountTextField?.text = nil
+                self.walletPwdTextField?.text = nil
+                self.receiverTextField?.text = nil
+                self.remarkTextField?.text = nil
+            })
+
+        }) { (error) in
+
+        }
     }
 
     @objc fileprivate func transBtnClick(btn: UIButton) {
@@ -47,7 +119,16 @@ class TransferViewController: BaseTableViewController {
     }
 
     @objc fileprivate func addContactBtnClick() {
-
+        let contactListVC = ContactListViewController()
+        contactListVC.didSelectedContactBlock = { (contactModel: ContactModel) in
+            Logger(contactModel.nickName)
+            self.addressTextField?.text = contactModel.address
+            let nickName = contactModel.nickName
+            if !(nickName?.isEmpty)! {
+                self.receiverTextField?.text = nickName
+            }
+        }
+        navigationController?.pushViewController(contactListVC, animated: true)
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {
@@ -190,7 +271,7 @@ class TransferViewController: BaseTableViewController {
             make.height.equalTo(20)
         }
 
-        balanceLabel = UILabel(text: nil, textColor: UIColor.white, font: UIFont(12))
+        balanceLabel = UILabel(text: nil, textColor: AppConstants.goldColor, font: UIFont(12))
         transOutContentView.addSubview(balanceLabel!)
         balanceLabel!.snp.makeConstraints { (make) in
             make.top.height.equalTo(balanceText)
@@ -324,7 +405,7 @@ extension TransferViewController: UITextFieldDelegate {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = CommonTableViewCell.cellWithTableView(tableView: tableView)
+        let cell = CommonTableViewCell.cellWithTableView(tableView)
         cell.contentView.addSubview(scrollView)
         return cell
     }

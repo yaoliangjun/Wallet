@@ -10,12 +10,13 @@ import UIKit
 
 class CommonTableViewCell: BaseTableViewCell {
 
-    static func cellWithTableView(tableView: UITableView) -> CommonTableViewCell {
+    static func cellWithTableView(_ tableView: UITableView) -> CommonTableViewCell {
         let cellReuseId = "cellReuseId"
         var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId) as? CommonTableViewCell
         if cell == nil {
             cell = self.init(style: .default, reuseIdentifier: cellReuseId)
             let backgroundImageView = UIImageView(imageName: "list_background")
+            backgroundImageView.contentMode = .scaleToFill
             cell!.backgroundView = backgroundImageView
             cell?.textLabel?.font = UIFont(15)
             cell?.textLabel?.textColor = UIColor.white

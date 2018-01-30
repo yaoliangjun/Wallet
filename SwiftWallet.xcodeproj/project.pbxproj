@@ -62,6 +62,9 @@
 		E92D12B0201B0B66007B4445 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12AF201B0B66007B4445 /* PlaceholderView.swift */; };
 		E92D12B2201B1AFE007B4445 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12B1201B1AFE007B4445 /* BaseModel.swift */; };
 		E92D14C8201EF413007B4445 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D14C7201EF412007B4445 /* QRCodeView.swift */; };
+		E92D171120205A47007B4445 /* ContactListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D171020205A47007B4445 /* ContactListViewController.swift */; };
+		E92D171320205DA4007B4445 /* ContactModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D171220205DA4007B4445 /* ContactModel.swift */; };
+		E92D1715202061CA007B4445 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D1714202061CA007B4445 /* ContactCell.swift */; };
 		E92F1A99201713510035E2C2 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F1A98201713510035E2C2 /* HomeServices.swift */; };
 		E92F1A9B201713C40035E2C2 /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92F1A9A201713C40035E2C2 /* BalanceModel.swift */; };
 		E95817632015967E001DF686 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95817622015967E001DF686 /* UIDevice+Extension.swift */; };
@@ -170,6 +173,9 @@
 		E92D12AF201B0B66007B4445 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		E92D12B1201B1AFE007B4445 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
 		E92D14C7201EF412007B4445 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
+		E92D171020205A47007B4445 /* ContactListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListViewController.swift; sourceTree = "<group>"; };
+		E92D171220205DA4007B4445 /* ContactModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactModel.swift; sourceTree = "<group>"; };
+		E92D1714202061CA007B4445 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		E92F1A98201713510035E2C2 /* HomeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
 		E92F1A9A201713C40035E2C2 /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		E95817622015967E001DF686 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -287,11 +293,11 @@
 		E91792DE2005E7D400AC0376 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E91793322005EF7A00AC0376 /* CommonUtils */,
-				E91792E12005E7D400AC0376 /* Utils */,
 				E91792DF2005E7D400AC0376 /* Controller */,
 				E91792E02005E7D400AC0376 /* Model */,
 				E91792E22005E7D400AC0376 /* View */,
+				E91793322005EF7A00AC0376 /* CommonUtils */,
+				E91792E12005E7D400AC0376 /* Utils */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -531,6 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A684352007135F00EE82AC /* TransferViewController.swift */,
+				E92D171020205A47007B4445 /* ContactListViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -539,6 +546,7 @@
 			isa = PBXGroup;
 			children = (
 				E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */,
+				E92D171220205DA4007B4445 /* ContactModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -554,6 +562,7 @@
 		E91792FB2005E7D400AC0376 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E92D1714202061CA007B4445 /* ContactCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -831,6 +840,7 @@
 				E92D12AE201AFCE9007B4445 /* TransHistoryCell.swift in Sources */,
 				E91793112005EBC000AC0376 /* ServerUrl.swift in Sources */,
 				E92710CE20172E7F009BEEAA /* TransHistoryViewController.swift in Sources */,
+				E92D1715202061CA007B4445 /* ContactCell.swift in Sources */,
 				E9A684342007133700EE82AC /* HomeViewController.swift in Sources */,
 				E9A6842E20070E0700EE82AC /* LoginServices.swift in Sources */,
 				E95817632015967E001DF686 /* UIDevice+Extension.swift in Sources */,
@@ -842,6 +852,7 @@
 				E92F1A99201713510035E2C2 /* HomeServices.swift in Sources */,
 				E917938120060E8C00AC0376 /* UIFont+Extension.swift in Sources */,
 				E91793052005EB6600AC0376 /* BaseViewController.swift in Sources */,
+				E92D171120205A47007B4445 /* ContactListViewController.swift in Sources */,
 				E917932E2005EEF800AC0376 /* UIImageView+Extension.swift in Sources */,
 				E917932A2005EEF800AC0376 /* UIBarButtonItem+Extension.swift in Sources */,
 				E91793302005EEF800AC0376 /* UITextField+Extension.swift in Sources */,
@@ -849,6 +860,7 @@
 				E91793892006FBE600AC0376 /* ImageButton.swift in Sources */,
 				E92D12B2201B1AFE007B4445 /* BaseModel.swift in Sources */,
 				E95E453B201874DC00ED59C3 /* UserInfoManager.swift in Sources */,
+				E92D171320205DA4007B4445 /* ContactModel.swift in Sources */,
 				E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */,
 				E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */,
 				E917930F2005EBC000AC0376 /* AppConstants.swift in Sources */,

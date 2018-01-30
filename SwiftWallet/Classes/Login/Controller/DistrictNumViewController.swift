@@ -62,7 +62,7 @@ extension DistrictNumViewController: UISearchResultsUpdating {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = DistrictNumCell.cellWithTableView(tableView: tableView) as! DistrictNumCell
+        let cell = DistrictNumCell.cellWithTableView(tableView) as! DistrictNumCell
         var model: DistrictModel? = nil
         if (searchController?.isActive)! {
             model = resultArray![indexPath.section]
@@ -111,6 +111,7 @@ extension DistrictNumViewController: UISearchResultsUpdating {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
     // MARK: - UISearchResultsUpdating
     func updateSearchResults(for searchController: UISearchController) {
         let filterString = searchController.searchBar.text

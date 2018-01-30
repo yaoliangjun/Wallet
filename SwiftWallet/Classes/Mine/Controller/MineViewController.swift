@@ -78,7 +78,7 @@ extension MineViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = CommonTableViewCell.cellWithTableView(tableView: tableView)
+        let cell = CommonTableViewCell.cellWithTableView(tableView)
         let section = indexPath.section
         if section == 0 {
             // 设置账号

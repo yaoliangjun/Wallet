@@ -64,9 +64,6 @@ class ExchangeViewController: BaseViewController {
             return
         }
 
-        let nickName = receiverTextField?.textFieldText()
-        let remark = remarkTextField?.textFieldText()
-
         // 判断是否设置了交易密码
         if !UserInfoManager.hasTradePassword() {
             view.endEditing(true)
@@ -84,6 +81,8 @@ class ExchangeViewController: BaseViewController {
             return
         }
 
+        let nickName = receiverTextField?.textFieldText()
+        let remark = remarkTextField?.textFieldText()
         view.endEditing(true)
 
         let params = ["coinSymbol": AppConstants.appCoinSymbol, "toAddress": address!, "amount": amount!, "tradePassword": tradePassword!.md5(), "nickName": nickName ?? "", "remark": remark ?? ""]
@@ -98,7 +97,15 @@ class ExchangeViewController: BaseViewController {
     }
 
     @objc fileprivate func addContactBtnClick() {
-
+        let contactListVC = ContactListViewController()
+        contactListVC.didSelectedContactBlock = { (contactModel: ContactModel) in
+            self.addressTextField?.text = contactModel.address
+            let nickName = contactModel.nickName
+            if !(nickName?.isEmpty)! {
+                self.receiverTextField?.textField?.text = nickName
+            }
+        }
+        navigationController?.pushViewController(contactListVC, animated: true)
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {

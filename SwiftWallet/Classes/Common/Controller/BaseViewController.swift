@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class BaseViewController: UIViewController {
 
@@ -20,6 +21,11 @@ class BaseViewController: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        MBProgressHUD.dismiss()
     }
 
     /// 子类重写该方法设置视图
@@ -40,5 +46,9 @@ class BaseViewController: UIViewController {
 
     @objc func popViewController() {
         navigationController?.popViewController(animated: true)
+    }
+
+    deinit {
+        Logger("##### \(self) deinit #####")
     }
 }
