@@ -132,7 +132,7 @@ class TransferViewController: BaseTableViewController {
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {
-
+        navigationController?.pushViewController(ScanViewController(), animated: true)
     }
 
     @objc fileprivate func copyBtnClick() {

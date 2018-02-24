@@ -109,7 +109,11 @@ class ExchangeViewController: BaseViewController {
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {
-
+        let scanVC = ScanViewController()
+        scanVC.didScanSuccessClosure = { (result: String?) in
+            self.addressTextField?.text = result
+        }
+        navigationController?.pushViewController(scanVC, animated: true)
     }
 
     // MARK: - Getter / Setter

@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		54FA2E006F9E7282C1C62D04 /* Pods_SwiftWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */; };
+		E913FEB02041518300E79408 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FEAF2041518200E79408 /* ScanViewController.swift */; };
+		E913FEB2204151DF00E79408 /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FEB1204151DF00E79408 /* MaskView.swift */; };
+		E913FEBE2041520D00E79408 /* code_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEB52041520D00E79408 /* code_box@2x.png */; };
+		E913FEBF2041520D00E79408 /* code_box@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEB62041520D00E79408 /* code_box@3x.png */; };
+		E913FEC02041520D00E79408 /* code_line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEB72041520D00E79408 /* code_line@2x.png */; };
+		E913FEC12041520D00E79408 /* code_line@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEB82041520D00E79408 /* code_line@3x.png */; };
+		E913FEC22041520D00E79408 /* sweep_album_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEB92041520D00E79408 /* sweep_album_icon@2x.png */; };
+		E913FEC32041520D00E79408 /* sweep_album_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBA2041520D00E79408 /* sweep_album_icon@3x.png */; };
+		E913FEC42041520D00E79408 /* sweep_light_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBB2041520D00E79408 /* sweep_light_icon@2x.png */; };
+		E913FEC52041520D00E79408 /* sweep_light_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */; };
+		E913FEC62041520D00E79408 /* noticeMusic.caf in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBD2041520D00E79408 /* noticeMusic.caf */; };
 		E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6A2012E9A000E86770 /* Array+Extension.swift */; };
 		E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */; };
 		E91792D12005E60D00AC0376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91792D02005E60D00AC0376 /* Assets.xcassets */; };
@@ -90,6 +101,17 @@
 /* Begin PBXFileReference section */
 		0B5DDB111F7A4FE9793CB16C /* Pods-SwiftWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		361138C3D9F22DA1DACAF60E /* Pods-SwiftWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet.release.xcconfig"; sourceTree = "<group>"; };
+		E913FEAF2041518200E79408 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
+		E913FEB1204151DF00E79408 /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
+		E913FEB52041520D00E79408 /* code_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code_box@2x.png"; sourceTree = "<group>"; };
+		E913FEB62041520D00E79408 /* code_box@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code_box@3x.png"; sourceTree = "<group>"; };
+		E913FEB72041520D00E79408 /* code_line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code_line@2x.png"; sourceTree = "<group>"; };
+		E913FEB82041520D00E79408 /* code_line@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code_line@3x.png"; sourceTree = "<group>"; };
+		E913FEB92041520D00E79408 /* sweep_album_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_album_icon@2x.png"; sourceTree = "<group>"; };
+		E913FEBA2041520D00E79408 /* sweep_album_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_album_icon@3x.png"; sourceTree = "<group>"; };
+		E913FEBB2041520D00E79408 /* sweep_light_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_light_icon@2x.png"; sourceTree = "<group>"; };
+		E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_light_icon@3x.png"; sourceTree = "<group>"; };
+		E913FEBD2041520D00E79408 /* noticeMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = noticeMusic.caf; sourceTree = "<group>"; };
 		E9170D6A2012E9A000E86770 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		E91792C62005E60D00AC0376 /* SwiftWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -228,6 +250,41 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E913FEAE2041506F00E79408 /* QRCodeComponent */ = {
+			isa = PBXGroup;
+			children = (
+				E913FEAF2041518200E79408 /* ScanViewController.swift */,
+				E913FEB1204151DF00E79408 /* MaskView.swift */,
+				E913FEB32041520D00E79408 /* Resources */,
+			);
+			name = QRCodeComponent;
+			path = SwiftWallet/Classes/Common/QRCodeComponent;
+			sourceTree = SOURCE_ROOT;
+		};
+		E913FEB32041520D00E79408 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E913FEB42041520D00E79408 /* Images */,
+				E913FEBD2041520D00E79408 /* noticeMusic.caf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E913FEB42041520D00E79408 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E913FEB52041520D00E79408 /* code_box@2x.png */,
+				E913FEB62041520D00E79408 /* code_box@3x.png */,
+				E913FEB72041520D00E79408 /* code_line@2x.png */,
+				E913FEB82041520D00E79408 /* code_line@3x.png */,
+				E913FEB92041520D00E79408 /* sweep_album_icon@2x.png */,
+				E913FEBA2041520D00E79408 /* sweep_album_icon@3x.png */,
+				E913FEBB2041520D00E79408 /* sweep_light_icon@2x.png */,
+				E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		E91792BD2005E60D00AC0376 = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +382,7 @@
 		E91792E12005E7D400AC0376 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E913FEAE2041506F00E79408 /* QRCodeComponent */,
 				E91793152005EEF800AC0376 /* BridgeHeader */,
 				E91793122005EEF800AC0376 /* Category */,
 				E91793192005EEF800AC0376 /* Extension */,
@@ -717,13 +775,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E913FEC32041520D00E79408 /* sweep_album_icon@3x.png in Resources */,
 				E91793762005F80000AC0376 /* guide_page_2@3x.png in Resources */,
+				E913FEC62041520D00E79408 /* noticeMusic.caf in Resources */,
 				E91793722005F80000AC0376 /* Default-iOS11-812h@3x.png in Resources */,
 				E917937A2005F80000AC0376 /* LaunchImage_1536x2048.png in Resources */,
 				E917937E2005F80000AC0376 /* LaunchImage_768x1024.png in Resources */,
 				E91793742005F80000AC0376 /* guide_page_1@3x.png in Resources */,
+				E913FEC52041520D00E79408 /* sweep_light_icon@3x.png in Resources */,
 				E91793792005F80000AC0376 /* LaunchImage_1242x2208.png in Resources */,
 				E91793782005F80000AC0376 /* guide_page_3@3x.png in Resources */,
+				E913FEC02041520D00E79408 /* code_line@2x.png in Resources */,
 				E91793772005F80000AC0376 /* guide_page_3@2x.png in Resources */,
 				E91793752005F80000AC0376 /* guide_page_2@2x.png in Resources */,
 				E917937B2005F80000AC0376 /* LaunchImage_640x1136.png in Resources */,
@@ -731,7 +793,12 @@
 				E917937F2005F80000AC0376 /* LaunchImage_768X1024.png in Resources */,
 				E917937C2005F80000AC0376 /* LaunchImage_640x960.png in Resources */,
 				E91792D12005E60D00AC0376 /* Assets.xcassets in Resources */,
+				E913FEC12041520D00E79408 /* code_line@3x.png in Resources */,
+				E913FEC42041520D00E79408 /* sweep_light_icon@2x.png in Resources */,
+				E913FEC22041520D00E79408 /* sweep_album_icon@2x.png in Resources */,
 				E917937D2005F80000AC0376 /* LaunchImage_750x1334.png in Resources */,
+				E913FEBF2041520D00E79408 /* code_box@3x.png in Resources */,
+				E913FEBE2041520D00E79408 /* code_box@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +885,7 @@
 				E91793282005EEF800AC0376 /* String+Extension.swift in Sources */,
 				E92F1A9B201713C40035E2C2 /* BalanceModel.swift in Sources */,
 				E9A6843C20088B2F00EE82AC /* ResponseModel.swift in Sources */,
+				E913FEB02041518300E79408 /* ScanViewController.swift in Sources */,
 				E917930A2005EB9700AC0376 /* BaseTableViewCell.swift in Sources */,
 				E91793262005EEF800AC0376 /* HttpManager.swift in Sources */,
 				E917932F2005EEF800AC0376 /* UILabel+Extension.swift in Sources */,
@@ -825,6 +893,7 @@
 				E91793252005EEF800AC0376 /* MBProgressHUD+Extension.m in Sources */,
 				E917932B2005EEF800AC0376 /* UIButton+Extension.swift in Sources */,
 				E9A6843020070E5B00EE82AC /* DistrictModel.swift in Sources */,
+				E913FEB2204151DF00E79408 /* MaskView.swift in Sources */,
 				E9F3AC76201ADE2200E98DC4 /* TransHistoryModel.swift in Sources */,
 				E91793032005EB6600AC0376 /* BaseTabBarController.swift in Sources */,
 				E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */,

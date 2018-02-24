@@ -20,10 +20,10 @@ class ServerUrl: NSObject {
 
     static func baseUrl() -> String {
         if environment == .develop {
-            return ""
+            return "http://47.75.12.155:8011"
 
         } else {
-            return ""
+            return "http://nxx.one:8088"
         }
     }
     

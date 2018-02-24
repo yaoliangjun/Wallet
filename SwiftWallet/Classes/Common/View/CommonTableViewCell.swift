@@ -7,6 +7,7 @@
 //  通用Cell
 
 import UIKit
+import HandyJSON
 
 class CommonTableViewCell: BaseTableViewCell {
 
