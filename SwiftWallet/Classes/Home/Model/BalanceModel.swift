@@ -7,11 +7,8 @@
 //  余额模型
 
 import UIKit
-import HandyJSON
 
-class BalanceModel: HandyJSON {
-
-    required init() {}
+class BalanceModel: BaseModel {
 
     var balance: String = "0" // 余额
     var freezed: String = "0" // 冻结金额

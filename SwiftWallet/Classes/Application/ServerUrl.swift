@@ -66,11 +66,11 @@ class ServerUrl: NSObject {
     /** =========================================== 首页接口 ============================================== */
 
     static let balance = "/api/balance" // 获取钱包余额
+    static let walletAddress = "/api/address" // 获取钱包地址
 
 //    #define HOME_MY_WALLET @"/api/myWallet" // 首页钱包信息
 //    #define HOME_ALL_COINS @"/api/coins"    // 获取所有有效币种
 //    #define HOME_ADD_WALLETS @"/api/coinWallet" // 添加钱包
-//    #define HOME_GET_WALLET_ADDRESS @"/api/address" // 获取钱包地址
 //    #define HOME_DELETE_WALLET @"/api/disCoinWallet" // 删除钱包
 
 

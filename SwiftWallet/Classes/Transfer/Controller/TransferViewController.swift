@@ -24,10 +24,12 @@ class TransferViewController: BaseTableViewController {
     fileprivate var copyingBtn: CommonButton?
     fileprivate var downloadBtn: CommonButton?
     fileprivate var balanceModel: BalanceModel?
+    fileprivate var qrCodeView: QRCodeView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchBalance()
+        fetchWalletAddress()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -46,6 +48,16 @@ class TransferViewController: BaseTableViewController {
         }
     }
 
+    fileprivate func fetchWalletAddress() {
+        let params = ["coinSymbol": AppConstants.appCoinSymbol]
+        HomeServices.walletAddress(params: params, showHUD: true, success: { (response) in
+            self.qrCodeView?.setupAddress(address: response?.address)
+
+        }) { (error) in
+            
+        }
+    }
+    
     // MARK: - Private Method
     @objc fileprivate func confirmBtnClick() {
         let address = addressTextField?.text
@@ -132,7 +144,11 @@ class TransferViewController: BaseTableViewController {
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {
-        navigationController?.pushViewController(ScanViewController(), animated: true)
+        let scanVC = ScanViewController()
+        scanVC.didScanSuccessClosure = { (result: String?) in
+            self.addressTextField?.text = result
+        }
+        navigationController?.pushViewController(scanVC, animated: true)
     }
 
     @objc fileprivate func copyBtnClick() {
@@ -362,9 +378,9 @@ class TransferViewController: BaseTableViewController {
         scrollView.addSubview(transInContentView)
 
         // 二维码View
-        let qrCodeView = QRCodeView()
-        transInContentView.addSubview(qrCodeView)
-        qrCodeView.snp.makeConstraints { (make) in
+        qrCodeView = QRCodeView()
+        transInContentView.addSubview(qrCodeView!)
+        qrCodeView!.snp.makeConstraints { (make) in
             make.top.equalTo(transInContentView).offset(35)
             make.centerX.equalTo(transInContentView)
             make.width.height.equalTo(235)
@@ -374,8 +390,8 @@ class TransferViewController: BaseTableViewController {
         copyingBtn = CommonButton(title: NSLocalizedString("复制地址", comment: ""), target: self, selector: #selector(copyBtnClick))
         transInContentView.addSubview(copyingBtn!)
         copyingBtn!.snp.makeConstraints { (make) in
-            make.left.equalTo(qrCodeView)
-            make.top.equalTo(qrCodeView.snp.bottom).offset(30)
+            make.left.equalTo(qrCodeView!)
+            make.top.equalTo(qrCodeView!.snp.bottom).offset(30)
             make.height.equalTo(45)
             make.width.equalTo(100)
         }
@@ -385,7 +401,7 @@ class TransferViewController: BaseTableViewController {
         transInContentView.addSubview(downloadBtn!)
         downloadBtn!.snp.makeConstraints { (make) in
             make.top.width.height.equalTo(copyingBtn!)
-            make.right.equalTo(qrCodeView.snp.right)
+            make.right.equalTo(qrCodeView!.snp.right)
         }
 
         return scrollView

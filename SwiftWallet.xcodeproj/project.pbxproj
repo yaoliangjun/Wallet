@@ -19,6 +19,7 @@
 		E913FEC42041520D00E79408 /* sweep_light_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBB2041520D00E79408 /* sweep_light_icon@2x.png */; };
 		E913FEC52041520D00E79408 /* sweep_light_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */; };
 		E913FEC62041520D00E79408 /* noticeMusic.caf in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBD2041520D00E79408 /* noticeMusic.caf */; };
+		E913FEC82043A8DE00E79408 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FEC72043A8DE00E79408 /* AddressModel.swift */; };
 		E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6A2012E9A000E86770 /* Array+Extension.swift */; };
 		E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */; };
 		E91792D12005E60D00AC0376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91792D02005E60D00AC0376 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		E913FEBB2041520D00E79408 /* sweep_light_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_light_icon@2x.png"; sourceTree = "<group>"; };
 		E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_light_icon@3x.png"; sourceTree = "<group>"; };
 		E913FEBD2041520D00E79408 /* noticeMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = noticeMusic.caf; sourceTree = "<group>"; };
+		E913FEC72043A8DE00E79408 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
 		E9170D6A2012E9A000E86770 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		E91792C62005E60D00AC0376 /* SwiftWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -605,6 +607,7 @@
 			children = (
 				E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */,
 				E92D171220205DA4007B4445 /* ContactModel.swift */,
+				E913FEC72043A8DE00E79408 /* AddressModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -921,6 +924,7 @@
 				E92F1A99201713510035E2C2 /* HomeServices.swift in Sources */,
 				E917938120060E8C00AC0376 /* UIFont+Extension.swift in Sources */,
 				E91793052005EB6600AC0376 /* BaseViewController.swift in Sources */,
+				E913FEC82043A8DE00E79408 /* AddressModel.swift in Sources */,
 				E92D171120205A47007B4445 /* ContactListViewController.swift in Sources */,
 				E917932E2005EEF800AC0376 /* UIImageView+Extension.swift in Sources */,
 				E917932A2005EEF800AC0376 /* UIBarButtonItem+Extension.swift in Sources */,

@@ -25,8 +25,8 @@ class QRCodeView: UIView {
 
     // MARK: - Public Method
     func setupAddress(address: String?) {
-//        qrCodeImageView.address = address
-//        qrCodeImageView.image = [UIImage createQRImageWithString:address size:CGSizeMake(230, 230)]
+        self.address = address
+        qrCodeImageView!.image = UIImage.createQRCodeImage(address!, CGSize(width: self.width, height: self.height))
     }
 
     func qrCodeImage() -> UIImage? {
@@ -52,7 +52,7 @@ class QRCodeView: UIView {
         }
 
         // LOGO
-        let logoImageView = UIImageView(imageName: "DDL_logo")
+        let logoImageView = UIImageView(imageName: "app_icon")
         logoImageView.layer.cornerRadius = 24
         logoImageView.layer.borderColor = UIColor.white.cgColor
         logoImageView.layer.borderWidth = 2
