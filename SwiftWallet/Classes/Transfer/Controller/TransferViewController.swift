@@ -183,7 +183,7 @@ class TransferViewController: BaseTableViewController {
     override func setupSubViews() {
         title = NSLocalizedString("转账", comment: "")
         tableView = createTableView(delegate: self, style: .plain)
-        tableView!.frame = CGRect(x: 0, y: 0, width: GlobalConstants.screenWidth, height: GlobalConstants.tableViewHeight)
+        tableView!.frame = CGRect(x: 0, y: 0, width: GlobalConstants.screenWidth, height: GlobalConstants.tableViewHeight - GlobalConstants.tabBarHeight)
         tableView!.allowsSelection = false
         tableView!.tableHeaderView = tableHeaderView
         view.addSubview(tableView!)

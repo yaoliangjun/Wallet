@@ -14,7 +14,7 @@ class GlobalConstants: NSObject {
     static let screenWidth: CGFloat = UIScreen.main.bounds.size.width
     static let navigationBarHeight: CGFloat = 64
     static let tabBarHeight: CGFloat = 49
-    static let tableViewHeight: CGFloat = screenHeight - navigationBarHeight - tabBarHeight
+    static let tableViewHeight: CGFloat = screenHeight - navigationBarHeight
     
     // 颜色
     static let navigationBarColor = UIColor(hexValue: 0x222126) // 导航栏背景颜色

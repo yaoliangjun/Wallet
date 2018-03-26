@@ -14,10 +14,10 @@ class ExchangeViewController: BaseViewController {
     fileprivate var balanceModel: BalanceModel?
     fileprivate var balanceLabel: UILabel?
     fileprivate var addressTextField: UITextField?
-    fileprivate var amountTextField: CommonTextFieldView?
-    fileprivate var walletPwdTextField: CommonTextFieldView?
-    fileprivate var receiverTextField: CommonTextFieldView?
-    fileprivate var remarkTextField: CommonTextFieldView?
+    fileprivate var amountTextField: CommonTextField?
+    fileprivate var walletPwdTextField: CommonTextField?
+    fileprivate var receiverTextField: CommonTextField?
+    fileprivate var remarkTextField: CommonTextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,7 @@ class ExchangeViewController: BaseViewController {
             return
         }
 
-        let amount = amountTextField?.textFieldText()
+        let amount = amountTextField?.text
         if (amount?.isEmpty)! {
             MBProgressHUD.show(withStatus: NSLocalizedString("请输入转至交易所数额", comment: ""))
             return
@@ -75,14 +75,14 @@ class ExchangeViewController: BaseViewController {
             return
         }
 
-        let tradePassword = walletPwdTextField?.textFieldText()
+        let tradePassword = walletPwdTextField?.text
         if (tradePassword?.isEmpty)! {
             MBProgressHUD.show(withStatus: NSLocalizedString("请输入交易密码", comment: ""))
             return
         }
 
-        let nickName = receiverTextField?.textFieldText()
-        let remark = remarkTextField?.textFieldText()
+        let nickName = receiverTextField?.text
+        let remark = remarkTextField?.text
         view.endEditing(true)
 
         let params = ["coinSymbol": AppConstants.appCoinSymbol, "toAddress": address!, "amount": amount!, "tradePassword": tradePassword!.md5(), "nickName": nickName ?? "", "remark": remark ?? ""]
@@ -102,7 +102,7 @@ class ExchangeViewController: BaseViewController {
             self.addressTextField?.text = contactModel.address
             let nickName = contactModel.nickName
             if !(nickName?.isEmpty)! {
-                self.receiverTextField?.textField?.text = nickName
+                self.receiverTextField?.text = nickName
             }
         }
         navigationController?.pushViewController(contactListVC, animated: true)
@@ -145,7 +145,7 @@ class ExchangeViewController: BaseViewController {
         balanceView.addSubview(balanceLabel!)
         balanceLabel!.snp.makeConstraints { (make) in
             make.top.height.equalTo(balanceView)
-            make.left.equalTo(balanceView).offset(20)
+            make.left.equalTo(balanceView).offset(15)
         }
 
         // 货币符号
@@ -169,7 +169,7 @@ class ExchangeViewController: BaseViewController {
         addressTextField = UITextField(text: nil, textColor: UIColor.white, placeholder: NSLocalizedString("请输入转至交易所地址或扫码", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(14))
         addressView.addSubview(addressTextField!)
         addressTextField!.snp.makeConstraints { (make) in
-            make.left.equalTo(addressView).offset(20)
+            make.left.equalTo(addressView).offset(15)
             make.top.bottom.equalTo(addressView)
         }
 
@@ -193,30 +193,30 @@ class ExchangeViewController: BaseViewController {
             make.height.equalTo(18)
         }
 
-        amountTextField = CommonTextFieldView(text: nil, textColor: AppConstants.goldColor, placeholder: NSLocalizedString("请输入转至交易所数额", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(15))
-        amountTextField?.textField?.delegate = self
-        amountTextField?.setKeyboardType(.decimalPad)
+        amountTextField = CommonTextField(text: nil, textColor: AppConstants.goldColor, placeholder: NSLocalizedString("请输入转至交易所数额", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(15))
+        amountTextField?.delegate = self
+        amountTextField?.keyboardType = .decimalPad
         contentView.addSubview(amountTextField!)
         amountTextField!.snp.makeConstraints { (make) in
             make.top.equalTo(addressView.snp.bottom).offset(15)
             make.left.right.height.equalTo(addressView)
         }
 
-        walletPwdTextField = CommonTextFieldView(text: nil, placeholder: NSLocalizedString("请输入转至交易所密码（交易密码）", comment: ""))
+        walletPwdTextField = CommonTextField(text: nil, placeholder: NSLocalizedString("请输入转至交易所密码（交易密码）", comment: ""))
         contentView.addSubview(walletPwdTextField!)
         walletPwdTextField!.snp.makeConstraints { (make) in
             make.top.equalTo(amountTextField!.snp.bottom).offset(15)
             make.left.right.height.equalTo(amountTextField!)
         }
 
-        receiverTextField = CommonTextFieldView(text: nil, placeholder: NSLocalizedString("请输入收款人昵称或手机号（非必填）", comment: ""))
+        receiverTextField = CommonTextField(text: nil, placeholder: NSLocalizedString("请输入收款人昵称或手机号（非必填）", comment: ""))
         contentView.addSubview(receiverTextField!)
         receiverTextField!.snp.makeConstraints { (make) in
             make.top.equalTo(walletPwdTextField!.snp.bottom).offset(15)
             make.left.right.height.equalTo(walletPwdTextField!);
         }
 
-        remarkTextField = CommonTextFieldView(text: nil, placeholder: NSLocalizedString("备注", comment: ""))
+        remarkTextField = CommonTextField(text: nil, placeholder: NSLocalizedString("备注", comment: ""))
         contentView.addSubview(remarkTextField!)
         remarkTextField!.snp.makeConstraints { (make) in
             make.top.equalTo(receiverTextField!.snp.bottom).offset(15)

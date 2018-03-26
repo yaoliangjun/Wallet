@@ -53,9 +53,9 @@ class QRCodeView: UIView {
 
         // LOGO
         let logoImageView = UIImageView(imageName: "app_icon")
-        logoImageView.layer.cornerRadius = 24
-        logoImageView.layer.borderColor = UIColor.white.cgColor
         logoImageView.layer.borderWidth = 2
+        logoImageView.layer.borderColor = UIColor.white.cgColor
+        logoImageView.layer.cornerRadius = 5
         logoImageView.layer.masksToBounds = true
         qrCodeImageView?.addSubview(logoImageView)
         logoImageView.snp.makeConstraints { (make) in

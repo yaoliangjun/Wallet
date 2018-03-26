@@ -49,7 +49,7 @@ extension HttpManager {
 
     // MARK: PUT请求
     func put<T: HandyJSON>(url: String, params: [String : Any]?, showHUD: Bool, success: @escaping (_ response: T?) -> (), failture: @escaping (_ error: Error) -> ()) {
-        request(url: url, method: .post, params: params, showHUD: showHUD, success: success, failture: failture)
+        request(url: url, method: .put, params: params, showHUD: showHUD, success: success, failture: failture)
     }
 
     // MARK: 请求基类

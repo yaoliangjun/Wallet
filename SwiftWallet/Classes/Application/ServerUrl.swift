@@ -20,13 +20,12 @@ class ServerUrl: NSObject {
 
     static func baseUrl() -> String {
         if environment == .develop {
-            return "http://47.75.12.155:8011"
+            return ""
 
         } else {
-            return "http://nxx.one:8088"
+            return ""
         }
     }
-    
 
     /** 注册登录 */
     static let login = "/api/login" // 登录
@@ -38,29 +37,14 @@ class ServerUrl: NSObject {
     static let logout = "/api/logout" // 退出登录
     static let appVersions = "/api/appVersions" // APP版本检查
 
-    /** =========================================== 登录注册接口 =========================================== */
-
-
-//    #define USER_LOGIN @"/api/login" // 登录
-//    #define USER_REGISTER @"/api/registerWithCaptcha" // 注册
-//    #define USER_REGISTER_GET_VERIFY_CODE @"/api/captchaForRegister" // 获取注册短信验证码
-//    #define USER_LOGOUT @"/api/logout" // 退出登录
-    //    #define USER_NATIONALS @"/api/nationalCodes" // 获取国家地区区号
-    //    #define USER_FORGET_PWD_RESET @"/api/resetPasswordForForget" // 忘记密码
-
-//    #define USER_FORGET_PWD_GET_VERIFY_CODE @"/api/captchaForForet" // 获取忘记密码验证码
-//    #define USER_REGISTER_PROTOCOL @"" // TODO 注册协议
-//    #define USER_GET_APP_VERSION @"/api/appVersions" // APP版本检查
-
 
 
     /** =========================================== 设置接口 ============================================== */
 
 
-//    #define SETTING_RESET_LOGIN_PWD @"/api/resetPassword" // 重置登录密码
-//    #define SETTING_SET_TRADE_PWD @"/api/resetTradePassword" // 设置交易密码
-//    #define SETTING_GET_TRADE_VERIFY_CODE @"/api/captchaForTrade" // 获取设置交易密码验证码
-//    #define SETTING_UPDATE_TRADE_PWD @"/api/resetTradePassword" // 设置交易密码
+    static let changeLoginPwd = "/api/resetPassword" // 重置登录密码
+    static let changeTradePwd = "/api/resetTradePassword" // 设置交易密码
+    static let captchaForTrade = "/api/captchaForTrade" // 获取设置交易密码验证码
 
 
     /** =========================================== 首页接口 ============================================== */

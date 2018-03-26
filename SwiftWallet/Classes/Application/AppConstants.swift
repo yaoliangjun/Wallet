@@ -11,7 +11,7 @@ import UIKit
 class AppConstants: NSObject {
 
     // APP币种
-    static let appCoinSymbol = "ddl"
+    static let appCoinSymbol = "mbt"
     
     // APP颜色常量值
     static let greyTextColor = UIColor(hexValue: 0x333333) // 灰色文字颜色

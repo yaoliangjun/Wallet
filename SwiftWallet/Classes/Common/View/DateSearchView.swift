@@ -128,7 +128,7 @@ extension DateSearchView: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         let date = datePicker.date
         textField.text = NSDate.dateString(date: date, GlobalEnum.DateFormatter.yyyymmdd.rawValue)
-        
+
         return true
     }
 }

@@ -129,10 +129,14 @@ extension TransHistoryViewController: DateSearchViewDelegate {
     func dateSearchViewDelegate(_ dateSearchView: DateSearchView, startDate: String?, endDate: String?) {
         if !(startDate?.isEmpty)! {
             startDateMillisecond = NSDate.millisecond(dateString: String(format: "%@ %@", startDate!, "0:0:0"), GlobalEnum.DateFormatter.yyyymmddhhmmss.rawValue)
+        } else {
+            startDateMillisecond = ""
         }
 
         if !(endDate?.isEmpty)! {
             endDateMillisecond = NSDate.millisecond(dateString: String(format: "%@ %@", endDate!, "23:59:59"), GlobalEnum.DateFormatter.yyyymmddhhmmss.rawValue)
+        } else {
+            endDateMillisecond = ""
         }
 
         if !(startDate?.isEmpty)! && (endDate?.isEmpty)! {

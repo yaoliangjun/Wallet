@@ -38,7 +38,7 @@ class MineViewController: BaseTableViewController {
         var titleArray = ["", // 账号
             NSLocalizedString("登录密码", comment: ""),
             NSLocalizedString("交易密码", comment: ""),
-            NSLocalizedString("关于NXX钱包", comment: ""),
+            NSLocalizedString("关于牛盾钱包", comment: ""),
             NSLocalizedString("更新检查", comment: "")]
         return titleArray
     }()
@@ -99,6 +99,16 @@ extension MineViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+
+        if indexPath.section == 1 {
+            navigationController?.pushViewController(ChangeLoginPasswordViewController(), animated: true)
+
+        } else if indexPath.section == 2 {
+            navigationController?.pushViewController(ChangeTradePasswordViewController(), animated: true)
+
+        } else if indexPath.section == 3 {
+            navigationController?.pushViewController(AboutViewController(), animated: true)
+        }
     }
 
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

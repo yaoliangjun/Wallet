@@ -33,7 +33,7 @@ extension String: HandyJSON {
     /// 校验字符串的长度是否为8-16且包含数字和字符
     func validPasswordFormatter() -> Bool {
         var result = false
-        let regex = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{8,16}$"
+        let regex = "^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regex)
         result = predicate.evaluate(with: self)
 
@@ -79,5 +79,13 @@ extension String: HandyJSON {
     /** 获取字符串默认保留小数点 */
     func defaultDecimalPoint() -> String {
         return decimalPoint(5)
+    }
+
+    func toRange(_ range: NSRange) -> Range<String.Index>? {
+        guard let from16 = utf16.index(utf16.startIndex, offsetBy: range.location, limitedBy: utf16.endIndex) else { return nil }
+        guard let to16 = utf16.index(from16, offsetBy: range.length, limitedBy: utf16.endIndex) else { return nil }
+        guard let from = String.Index(from16, within: self) else { return nil }
+        guard let to = String.Index(to16, within: self) else { return nil }
+        return from ..< to
     }
 }

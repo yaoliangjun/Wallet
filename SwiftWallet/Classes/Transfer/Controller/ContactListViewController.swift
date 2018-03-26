@@ -34,7 +34,7 @@ class ContactListViewController: BaseTableViewController {
 
     // MARK: - Private Method
     @objc fileprivate func addContactBtnClick() {
-        navigationController?.pushViewController(ContactListViewController(), animated: true)
+        navigationController?.pushViewController(AddContactViewController(), animated: true)
     }
 
     fileprivate func showDeleteAlertView() {

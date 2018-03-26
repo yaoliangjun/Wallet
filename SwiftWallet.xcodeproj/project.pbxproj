@@ -20,6 +20,7 @@
 		E913FEC52041520D00E79408 /* sweep_light_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */; };
 		E913FEC62041520D00E79408 /* noticeMusic.caf in Resources */ = {isa = PBXBuildFile; fileRef = E913FEBD2041520D00E79408 /* noticeMusic.caf */; };
 		E913FEC82043A8DE00E79408 /* AddressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FEC72043A8DE00E79408 /* AddressModel.swift */; };
+		E913FECE204531DA00E79408 /* AddContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FECD204531DA00E79408 /* AddContactViewController.swift */; };
 		E9170D6B2012E9A000E86770 /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6A2012E9A000E86770 /* Array+Extension.swift */; };
 		E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */; };
 		E91792D12005E60D00AC0376 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E91792D02005E60D00AC0376 /* Assets.xcassets */; };
@@ -69,7 +70,10 @@
 		E9179385200624B100AC0376 /* ForgetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9179384200624B100AC0376 /* ForgetPasswordViewController.swift */; };
 		E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9179386200624D500AC0376 /* RegisterViewController.swift */; };
 		E91793892006FBE600AC0376 /* ImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91793882006FBE600AC0376 /* ImageButton.swift */; };
+		E91E9A622061145B00623F3E /* ChangeLoginPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E9A612061145B00623F3E /* ChangeLoginPasswordViewController.swift */; };
+		E91E9A64206114EA00623F3E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91E9A63206114EA00623F3E /* AboutViewController.swift */; };
 		E92710CE20172E7F009BEEAA /* TransHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92710CD20172E7F009BEEAA /* TransHistoryViewController.swift */; };
+		E92B87962068AB0F009CE7F7 /* MineServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92B87952068AB0F009CE7F7 /* MineServices.swift */; };
 		E92D12AE201AFCE9007B4445 /* TransHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12AD201AFCE9007B4445 /* TransHistoryCell.swift */; };
 		E92D12B0201B0B66007B4445 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12AF201B0B66007B4445 /* PlaceholderView.swift */; };
 		E92D12B2201B1AFE007B4445 /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92D12B1201B1AFE007B4445 /* BaseModel.swift */; };
@@ -96,7 +100,7 @@
 		E9F3AC722019C98E00E98DC4 /* DateSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */; };
 		E9F3AC742019D7DA00E98DC4 /* GlobalEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */; };
 		E9F3AC76201ADE2200E98DC4 /* TransHistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */; };
-		E9FBA40820181F7B00A315E0 /* CommonTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */; };
+		E9FBA40820181F7B00A315E0 /* CommonTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FBA40720181F7B00A315E0 /* CommonTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +118,7 @@
 		E913FEBC2041520D00E79408 /* sweep_light_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sweep_light_icon@3x.png"; sourceTree = "<group>"; };
 		E913FEBD2041520D00E79408 /* noticeMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = noticeMusic.caf; sourceTree = "<group>"; };
 		E913FEC72043A8DE00E79408 /* AddressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressModel.swift; sourceTree = "<group>"; };
+		E913FECD204531DA00E79408 /* AddContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContactViewController.swift; sourceTree = "<group>"; };
 		E9170D6A2012E9A000E86770 /* Array+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extension.swift"; sourceTree = "<group>"; };
 		E91792C62005E60D00AC0376 /* SwiftWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -192,7 +197,10 @@
 		E9179384200624B100AC0376 /* ForgetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordViewController.swift; sourceTree = "<group>"; };
 		E9179386200624D500AC0376 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		E91793882006FBE600AC0376 /* ImageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageButton.swift; sourceTree = "<group>"; };
+		E91E9A612061145B00623F3E /* ChangeLoginPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLoginPasswordViewController.swift; sourceTree = "<group>"; };
+		E91E9A63206114EA00623F3E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		E92710CD20172E7F009BEEAA /* TransHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryViewController.swift; sourceTree = "<group>"; };
+		E92B87952068AB0F009CE7F7 /* MineServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineServices.swift; sourceTree = "<group>"; };
 		E92D12AD201AFCE9007B4445 /* TransHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryCell.swift; sourceTree = "<group>"; };
 		E92D12AF201B0B66007B4445 /* PlaceholderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		E92D12B1201B1AFE007B4445 /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
@@ -219,7 +227,7 @@
 		E9F3AC712019C98E00E98DC4 /* DateSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateSearchView.swift; sourceTree = "<group>"; };
 		E9F3AC732019D7DA00E98DC4 /* GlobalEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalEnum.swift; sourceTree = "<group>"; };
 		E9F3AC75201ADE2200E98DC4 /* TransHistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransHistoryModel.swift; sourceTree = "<group>"; };
-		E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextFieldView.swift; sourceTree = "<group>"; };
+		E9FBA40720181F7B00A315E0 /* CommonTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonTextField.swift; sourceTree = "<group>"; };
 		F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWallet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -401,7 +409,7 @@
 				E91793082005EB9600AC0376 /* BaseTableViewCell.swift */,
 				E91793092005EB9600AC0376 /* CommonTableViewCell.swift */,
 				E91793822006172E00AC0376 /* CommonButton.swift */,
-				E9FBA40720181F7B00A315E0 /* CommonTextFieldView.swift */,
+				E9FBA40720181F7B00A315E0 /* CommonTextField.swift */,
 				E9EE2EBE20183E1000AC80D4 /* CommonView.swift */,
 				E92D12AF201B0B66007B4445 /* PlaceholderView.swift */,
 				E92D14C7201EF412007B4445 /* QRCodeView.swift */,
@@ -548,7 +556,9 @@
 			isa = PBXGroup;
 			children = (
 				E9A684372007137600EE82AC /* MineViewController.swift */,
+				E91E9A612061145B00623F3E /* ChangeLoginPasswordViewController.swift */,
 				E95E453C201884AD00ED59C3 /* ChangeTradePasswordViewController.swift */,
+				E91E9A63206114EA00623F3E /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -563,6 +573,7 @@
 		E91792F42005E7D400AC0376 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				E92B87952068AB0F009CE7F7 /* MineServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -598,6 +609,7 @@
 			children = (
 				E9A684352007135F00EE82AC /* TransferViewController.swift */,
 				E92D171020205A47007B4445 /* ContactListViewController.swift */,
+				E913FECD204531DA00E79408 /* AddContactViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -902,10 +914,11 @@
 				E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */,
 				E91793022005EB6600AC0376 /* BaseTableViewController.swift in Sources */,
 				E91792FD2005EAA000AC0376 /* AppDelegate.swift in Sources */,
-				E9FBA40820181F7B00A315E0 /* CommonTextFieldView.swift in Sources */,
+				E9FBA40820181F7B00A315E0 /* CommonTextField.swift in Sources */,
 				E91793102005EBC000AC0376 /* GlobalConstants.swift in Sources */,
 				E91793042005EB6600AC0376 /* BaseNavigationController.swift in Sources */,
 				E91793272005EEF800AC0376 /* NSDate+Extension.swift in Sources */,
+				E91E9A64206114EA00623F3E /* AboutViewController.swift in Sources */,
 				E9A684382007137600EE82AC /* MineViewController.swift in Sources */,
 				E91793832006172E00AC0376 /* CommonButton.swift in Sources */,
 				E917930B2005EB9700AC0376 /* CommonTableViewCell.swift in Sources */,
@@ -925,9 +938,11 @@
 				E917938120060E8C00AC0376 /* UIFont+Extension.swift in Sources */,
 				E91793052005EB6600AC0376 /* BaseViewController.swift in Sources */,
 				E913FEC82043A8DE00E79408 /* AddressModel.swift in Sources */,
+				E913FECE204531DA00E79408 /* AddContactViewController.swift in Sources */,
 				E92D171120205A47007B4445 /* ContactListViewController.swift in Sources */,
 				E917932E2005EEF800AC0376 /* UIImageView+Extension.swift in Sources */,
 				E917932A2005EEF800AC0376 /* UIBarButtonItem+Extension.swift in Sources */,
+				E91E9A622061145B00623F3E /* ChangeLoginPasswordViewController.swift in Sources */,
 				E91793302005EEF800AC0376 /* UITextField+Extension.swift in Sources */,
 				E9179387200624D500AC0376 /* RegisterViewController.swift in Sources */,
 				E91793892006FBE600AC0376 /* ImageButton.swift in Sources */,
@@ -938,6 +953,7 @@
 				E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */,
 				E917930F2005EBC000AC0376 /* AppConstants.swift in Sources */,
 				E92D12B0201B0B66007B4445 /* PlaceholderView.swift in Sources */,
+				E92B87962068AB0F009CE7F7 /* MineServices.swift in Sources */,
 				E95E453F2018874A00ED59C3 /* TransferServices.swift in Sources */,
 				E91793312005EEF800AC0376 /* UIView+Extension.swift in Sources */,
 				E99C72F220172CC8006D24BF /* ExchangeViewController.swift in Sources */,
