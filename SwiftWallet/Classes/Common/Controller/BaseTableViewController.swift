@@ -77,6 +77,7 @@ class BaseTableViewController: BaseViewController {
         header?.setTitle("松开刷新", for: .pulling)
         header?.setTitle("加载中...", for: .refreshing)
         header?.stateLabel.textColor = UIColor.white
+        header?.activityIndicatorViewStyle = .white
         tableView.mj_header = header
 
         let footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(pullUpToRefresh))
@@ -84,6 +85,7 @@ class BaseTableViewController: BaseViewController {
         footer?.setTitle("松开刷新", for: .pulling)
         footer?.setTitle("加载中...", for: .refreshing)
         footer?.stateLabel.textColor = UIColor.white
+        footer?.activityIndicatorViewStyle = .white
         tableView.mj_footer = footer
         tableView.mj_footer.isHidden = true
     }

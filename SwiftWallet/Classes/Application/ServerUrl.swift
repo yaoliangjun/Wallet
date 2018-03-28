@@ -20,10 +20,10 @@ class ServerUrl: NSObject {
 
     static func baseUrl() -> String {
         if environment == .develop {
-            return ""
+            return "https://mwallet.world-mecoin.com"
 
         } else {
-            return ""
+            return "https://mwallet.world-mecoin.com"
         }
     }
 

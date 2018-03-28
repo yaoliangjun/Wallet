@@ -15,6 +15,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         fetchBalance()
+        AppVersionManager.sharedManager.fetchAPPVersion(completionHandle: nil)
     }
 
     // MARK: - HTTP

@@ -55,11 +55,7 @@ class LoginViewController: BaseViewController {
             UserInfoManager.saveAccount(account)
             UserInfoManager.saveToken(token)
             UserInfoManager.saveHasTradePassword(hasTradePassword)
-
-//            UserDefaults.standard.setValue(hasTradePassword!, forKey: AppConstants.hasTradePassword)
-//            UserDefaults.standard.setValue(token!, forKey: AppConstants.token)
-//            UserDefaults.standard.setValue(account, forKey: AppConstants.account)
-//            UserDefaults.standard.synchronize()
+            
             (UIApplication.shared.delegate as! AppDelegate).showMainPage()
             
         }) { (error) in

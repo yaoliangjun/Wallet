@@ -69,4 +69,14 @@ class LoginServices: NSObject {
 
         }
     }
+
+    /** APP版本更新检查 */
+    static func appVersionWithParams(params: [String: Any]?, showHUD: Bool, success: @escaping (_ response: APPVersionModel?) -> (), failure: @escaping (_ error: Error) -> ()) {
+        HttpManager.sharedManager.get(url: ServerUrl.appVersions, params: params, showHUD: showHUD, success: { (response) in
+            success(response)
+
+        }) { (error) in
+
+        }
+    }
 }

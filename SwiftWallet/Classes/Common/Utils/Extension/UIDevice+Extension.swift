@@ -93,26 +93,6 @@ extension UIDevice {
         return false
     }
 
-//    static func matchSize(_ size: Double) -> Bool {
-//        if size == 3.5 {
-//            return iPhone4() || iPhone4s()
-//
-//        } else if size == 4 {
-//            return iPhone5() || iPhone5c() || iPhone5s() || iPhone5se()
-//
-//        } else if size == 4.7 {
-//            return iPhone6() || iPhone6s() || iPhone7() || iPhone8()
-//
-//        } else if size == 5.5 {
-//            return iPhone6p() || iPhone6sp() || iPhone7p() || iPhone8p()
-//
-//        } else if size == 5.8 {
-//            return iPhoneX()
-//        }
-//
-//        return false
-//    }
-
     static func simulator() -> Bool {
         if modelName == "i386" ||
             modelName == "x86_64" {

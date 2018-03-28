@@ -187,10 +187,10 @@ class ExchangeViewController: BaseViewController {
         addressView.addSubview(scanQRCodeBtn)
         scanQRCodeBtn.snp.makeConstraints { (make) in
             make.left.equalTo(addContactBtn.snp.right).offset(20)
-            make.right.equalTo(addressView).offset(-20)
+            make.right.equalTo(addressView).offset(-15)
             make.centerY.equalTo(addressView)
-            make.width.equalTo(20)
-            make.height.equalTo(18)
+            make.width.equalTo(25)
+            make.height.equalTo(23)
         }
 
         amountTextField = CommonTextField(text: nil, textColor: AppConstants.goldColor, placeholder: NSLocalizedString("请输入转至交易所数额", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(15))

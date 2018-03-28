@@ -67,7 +67,7 @@ extension HttpManager {
 
                 var responseJson = JSON(value).rawString()
                 responseJson = responseJson?.replacingOccurrences(of: "\n", with: "")
-                print("\nREQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nREQUEST METHOD: \(method) \nRESPONSE: \(responseJson!)\n\n")
+                print("\nREQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nREQUEST METHOD: \(method.rawValue) \nRESPONSE: \(responseJson!)\n\n")
 
                 let responseModel = ResponseModel<T>.deserialize(from: responseJson)
                 if responseModel?.code == 401 {
@@ -155,84 +155,4 @@ extension HttpManager {
             MBProgressHUD.dismiss()
         }
     }
-
-
-
-
-
-
-
-
-//    // MARK: - GET请求
-//    func get(url: String, params: [String: Any]?, showHUD: Bool, success: @escaping (_ response: BaseResponseModel?) -> (), failture: @escaping (_ error: Error) -> ()) {
-//        request(url: url, method: .get, params: params, showHUD: showHUD, success: success, failture: failture)
-//    }
-//
-//    // MARK: POST请求
-//    func post(url: String, params: [String : Any]?, showHUD: Bool, success: @escaping (_ response: BaseResponseModel?) -> (), failture: @escaping (_ error: Error) -> ()) {
-//        request(url: url, method: .post, params: params, showHUD: showHUD, success: success, failture: failture)
-//    }
-//
-//    // MARK: PUT请求
-//    func put(url: String, params: [String : Any]?, showHUD: Bool, success: @escaping (_ response: BaseResponseModel?) -> (), failture: @escaping (_ error: Error) -> ()) {
-//        request(url: url, method: .put, params: params, showHUD: showHUD, success: success, failture: failture)
-//    }
-//
-//    // MARK: 请求基类
-//    fileprivate func request(url: String, method: HTTPMethod, params: Parameters?, showHUD: Bool, success : @escaping (_ response : BaseResponseModel?) -> (), failture : @escaping (_ error : Error) -> ()) -> () {
-//
-//        self.showHUD(showHUD: showHUD)
-//        let requestUrl = ServerUrl.baseUrl() + url
-//        Alamofire.request(requestUrl, method: method, parameters: params, headers: globalHeader()).responseJSON { (response) in
-//
-//            switch response.result {
-//
-//            case .success(let value):
-//                self.dismissHUD(showHUD: showHUD)
-//
-//                var responseJson = JSON(value).rawString()
-//                responseJson = responseJson?.replacingOccurrences(of: "\n", with: "")
-//                print("REQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nREQUEST METHOD: \(method) \nRESPONSE: \(responseJson!)\n\n")
-//
-//                let responseModel = self.processResponse(responseJSON: value)
-//                if responseModel != nil {
-//                    success(responseModel)
-//                }
-//
-//            case .failure(let error):
-//                self.dismissHUD(showHUD: showHUD)
-//                print("HTTP REQUEST ERROR: \(error)")
-//                failture(error)
-//            }
-//        }
-//    }
-
-//    func processResponse(responseJSON: Any?) -> BaseResponseModel? {
-//        guard let response = responseJSON else {
-//            return nil
-//        }
-//
-//        let responseModel = BaseResponseModel.mj_object(withKeyValues: response)
-//
-//        if responseModel?.code == 401 {
-//            // Token失效
-//            let errorMsg = responseModel?.msg ?? ""
-//            if !errorMsg.isEmpty {
-//                MBProgressHUD.show(withStatus: errorMsg)
-//            }
-//
-//            (UIApplication.shared.delegate as! AppDelegate).logout()
-//            return nil
-//
-//        } else if responseModel?.code != 0 {
-//            let errorMsg = responseModel?.msg ?? ""
-//            if !errorMsg.isEmpty {
-//                MBProgressHUD.show(withStatus: errorMsg)
-//            }
-//            return nil
-//        }
-//
-//        return responseModel!
-//    }
-
 }

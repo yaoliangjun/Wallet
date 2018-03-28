@@ -60,8 +60,8 @@ class AddContactViewController: BaseViewController {
             make.right.equalTo(contentView).offset(-20);
             make.left.equalTo(addressTextField!.snp.right).offset(10);
             make.centerY.equalTo(contentView);
-            make.width.equalTo(20);
-            make.height.equalTo(18);
+            make.width.equalTo(25);
+            make.height.equalTo(23);
         }
 
         nickNameTextField = CommonTextField(text: nil, textColor: AppConstants.goldColor, placeholder: NSLocalizedString("请输入对方昵称或手机号", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(15))

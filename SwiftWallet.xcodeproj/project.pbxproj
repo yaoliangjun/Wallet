@@ -87,6 +87,10 @@
 		E95E453B201874DC00ED59C3 /* UserInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E453A201874DC00ED59C3 /* UserInfoManager.swift */; };
 		E95E453D201884AD00ED59C3 /* ChangeTradePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E453C201884AD00ED59C3 /* ChangeTradePasswordViewController.swift */; };
 		E95E453F2018874A00ED59C3 /* TransferServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95E453E2018874A00ED59C3 /* TransferServices.swift */; };
+		E9858049206B7D9F0055B46D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9858048206B7D9F0055B46D /* Bundle+Extension.swift */; };
+		E985804B206B89BB0055B46D /* AppVersionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985804A206B89BB0055B46D /* AppVersionManager.swift */; };
+		E985804D206B8B480055B46D /* APPVersionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985804C206B8B480055B46D /* APPVersionModel.swift */; };
+		E985804F206B8DC00055B46D /* MyAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E985804E206B8DC00055B46D /* MyAlertView.swift */; };
 		E99C72F220172CC8006D24BF /* ExchangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E99C72F120172CC8006D24BF /* ExchangeViewController.swift */; };
 		E9A6842C20070AAE00EE82AC /* DistrictNumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */; };
 		E9A6842E20070E0700EE82AC /* LoginServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A6842D20070E0700EE82AC /* LoginServices.swift */; };
@@ -214,6 +218,10 @@
 		E95E453A201874DC00ED59C3 /* UserInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoManager.swift; sourceTree = "<group>"; };
 		E95E453C201884AD00ED59C3 /* ChangeTradePasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeTradePasswordViewController.swift; sourceTree = "<group>"; };
 		E95E453E2018874A00ED59C3 /* TransferServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferServices.swift; sourceTree = "<group>"; };
+		E9858048206B7D9F0055B46D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		E985804A206B89BB0055B46D /* AppVersionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppVersionManager.swift; sourceTree = "<group>"; };
+		E985804C206B8B480055B46D /* APPVersionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APPVersionModel.swift; sourceTree = "<group>"; };
+		E985804E206B8DC00055B46D /* MyAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAlertView.swift; sourceTree = "<group>"; };
 		E99C72F120172CC8006D24BF /* ExchangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeViewController.swift; sourceTree = "<group>"; };
 		E9A6842B20070AAE00EE82AC /* DistrictNumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistrictNumViewController.swift; sourceTree = "<group>"; };
 		E9A6842D20070E0700EE82AC /* LoginServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginServices.swift; sourceTree = "<group>"; };
@@ -413,6 +421,7 @@
 				E9EE2EBE20183E1000AC80D4 /* CommonView.swift */,
 				E92D12AF201B0B66007B4445 /* PlaceholderView.swift */,
 				E92D14C7201EF412007B4445 /* QRCodeView.swift */,
+				E985804E206B8DC00055B46D /* MyAlertView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -489,6 +498,7 @@
 			isa = PBXGroup;
 			children = (
 				E9A6842F20070E5B00EE82AC /* DistrictModel.swift */,
+				E985804C206B8B480055B46D /* APPVersionModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -662,6 +672,7 @@
 			children = (
 				E91793182005EEF800AC0376 /* HttpManager.swift */,
 				E95E453A201874DC00ED59C3 /* UserInfoManager.swift */,
+				E985804A206B89BB0055B46D /* AppVersionManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -684,6 +695,7 @@
 				E9170D6A2012E9A000E86770 /* Array+Extension.swift */,
 				E9170D6C2012E9B100E86770 /* Dictionary+Extension.swift */,
 				E95817622015967E001DF686 /* UIDevice+Extension.swift */,
+				E9858048206B7D9F0055B46D /* Bundle+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -893,6 +905,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E917933A2005F34B00AC0376 /* MainTabBarController.swift in Sources */,
+				E9858049206B7D9F0055B46D /* Bundle+Extension.swift in Sources */,
 				E9F3AC742019D7DA00E98DC4 /* GlobalEnum.swift in Sources */,
 				E91793362005F2F200AC0376 /* LoginViewController.swift in Sources */,
 				E9EE2EBF20183E1000AC80D4 /* CommonView.swift in Sources */,
@@ -904,8 +917,10 @@
 				E917930A2005EB9700AC0376 /* BaseTableViewCell.swift in Sources */,
 				E91793262005EEF800AC0376 /* HttpManager.swift in Sources */,
 				E917932F2005EEF800AC0376 /* UILabel+Extension.swift in Sources */,
+				E985804B206B89BB0055B46D /* AppVersionManager.swift in Sources */,
 				E9A6843220070ED000EE82AC /* DistrictNumCell.swift in Sources */,
 				E91793252005EEF800AC0376 /* MBProgressHUD+Extension.m in Sources */,
+				E985804D206B8B480055B46D /* APPVersionModel.swift in Sources */,
 				E917932B2005EEF800AC0376 /* UIButton+Extension.swift in Sources */,
 				E9A6843020070E5B00EE82AC /* DistrictModel.swift in Sources */,
 				E913FEB2204151DF00E79408 /* MaskView.swift in Sources */,
@@ -914,6 +929,7 @@
 				E9A684362007135F00EE82AC /* TransferViewController.swift in Sources */,
 				E91793022005EB6600AC0376 /* BaseTableViewController.swift in Sources */,
 				E91792FD2005EAA000AC0376 /* AppDelegate.swift in Sources */,
+				E985804F206B8DC00055B46D /* MyAlertView.swift in Sources */,
 				E9FBA40820181F7B00A315E0 /* CommonTextField.swift in Sources */,
 				E91793102005EBC000AC0376 /* GlobalConstants.swift in Sources */,
 				E91793042005EB6600AC0376 /* BaseNavigationController.swift in Sources */,

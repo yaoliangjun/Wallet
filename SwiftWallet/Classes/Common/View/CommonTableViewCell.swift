@@ -15,13 +15,13 @@ class CommonTableViewCell: BaseTableViewCell {
         let cellReuseId = "cellReuseId"
         var cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId) as? CommonTableViewCell
         if cell == nil {
-            cell = self.init(style: .default, reuseIdentifier: cellReuseId)
+            cell = self.init(style: .value1, reuseIdentifier: cellReuseId)
             let backgroundImageView = UIImageView(imageName: "list_background")
             backgroundImageView.contentMode = .scaleToFill
             cell!.backgroundView = backgroundImageView
             cell?.textLabel?.font = UIFont(15)
             cell?.textLabel?.textColor = UIColor.white
-            cell?.detailTextLabel?.font = UIFont(10)
+            cell?.detailTextLabel?.font = UIFont(12)
             cell?.detailTextLabel?.textColor = UIColor.white
         }
 

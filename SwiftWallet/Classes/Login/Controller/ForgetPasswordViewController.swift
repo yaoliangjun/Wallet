@@ -30,6 +30,12 @@ class ForgetPasswordViewController: BaseViewController {
         fetchDistrictNum()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+        timer = nil
+    }
+
     // MARK: - Private Method
     // 获取区号
     func fetchDistrictNum() {
@@ -251,9 +257,9 @@ class ForgetPasswordViewController: BaseViewController {
         }
 
         // 获取验证码
-        let verifyCodeBtn = UIButton(title: NSLocalizedString("获取验证码", comment: ""), titleColor: AppConstants.greyTextColor, highlightedTitleColor: AppConstants.greyTextColor, font: UIFont(12), backgroundColor: AppConstants.grayColor, borderWidth: 0, borderColor: nil, cornerRadius: 4, target: self, selector: #selector(verifyCodeBtnClick))
-        contentView.addSubview(verifyCodeBtn)
-        verifyCodeBtn.snp.makeConstraints { (make) in
+        verifyCodeBtn = UIButton(title: NSLocalizedString("获取验证码", comment: ""), titleColor: AppConstants.greyTextColor, highlightedTitleColor: AppConstants.greyTextColor, font: UIFont(12), backgroundColor: AppConstants.grayColor, borderWidth: 0, borderColor: nil, cornerRadius: 4, target: self, selector: #selector(verifyCodeBtnClick))
+        contentView.addSubview(verifyCodeBtn!)
+        verifyCodeBtn!.snp.makeConstraints { (make) in
             make.centerY.equalTo(verifyCodeTextField!);
             make.left.equalTo(verifyCodeTextField!.snp.right).offset(10)
             make.width.equalTo(90)

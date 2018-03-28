@@ -325,8 +325,8 @@ class TransferViewController: BaseTableViewController {
             make.left.equalTo(addressTextField!.snp.right).offset(20)
             make.right.equalTo(transOutContentView).offset(-20)
             make.centerY.equalTo(addressTextField!)
-            make.width.equalTo(20)
-            make.height.equalTo(18)
+            make.width.equalTo(25)
+            make.height.equalTo(23)
         }
 
         let amountLeftView = UIView(frame: CGRect(x: 0, y: 0, width: 5, height: 5))

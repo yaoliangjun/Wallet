@@ -195,7 +195,7 @@ class ChangeLoginPasswordViewController: BaseViewController, UITextFieldDelegate
             make.left.right.height.equalTo(pwdTextField!)
         }
 
-        let confirmBtn = CommonButton(title: NSLocalizedString("确定修改密码", comment: ""), target: self, selector: #selector(resetPasswordBtnClick))
+        let confirmBtn = CommonButton(title: NSLocalizedString("确定", comment: ""), target: self, selector: #selector(resetPasswordBtnClick))
         self.view.addSubview(confirmBtn)
         confirmBtn.snp.makeConstraints { (make) in
             make.height.equalTo(50);

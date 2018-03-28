@@ -16,17 +16,7 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let photoLibraryItem = UIBarButtonItem(image: UIImage(named: "sweep_album_icon"), style: .plain, target: self, action: #selector(photoLibraryBtnClick))
-        let flashItem = UIBarButtonItem(image: UIImage(named: "sweep_light_icon"), style: .plain, target: self, action: #selector(flashBtnClick))
-        self.navigationItem.rightBarButtonItems = [flashItem, photoLibraryItem]
-
-        let layer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
-        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
-        layer.frame = self.view.layer.bounds
-        self.view.layer.insertSublayer(layer, at: 0)
-
-        view.addSubview(maskView)
+        setupSubViews()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -39,18 +29,45 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         stopScanning()
     }
 
+    func setupSubViews() {
+        view.backgroundColor = GlobalConstants.backgroundColor
+
+        // 设置导航栏返回按钮图片
+        navigationItem.leftBarButtonItem = UIBarButtonItem(arrowImageName: "return_button_normal", target: self, selector: #selector(popViewController))
+
+        // 设置导航栏右侧按钮
+        let photoLibraryItem = UIBarButtonItem(image: UIImage(named: "sweep_album_icon"), style: .plain, target: self, action: #selector(photoLibraryBtnClick))
+        let flashItem = UIBarButtonItem(image: UIImage(named: "sweep_light_icon"), style: .plain, target: self, action: #selector(flashBtnClick))
+        self.navigationItem.rightBarButtonItems = [flashItem, photoLibraryItem]
+
+        let layer:AVCaptureVideoPreviewLayer = AVCaptureVideoPreviewLayer(session: session)
+        layer.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        layer.frame = self.view.layer.bounds
+        self.view.layer.insertSublayer(layer, at: 0)
+
+        view.addSubview(maskView)
+    }
+
     // 开始扫描
     func startScanning() {
-        self.session.startRunning()
         self.maskView.startAnimation()
+        DispatchQueue.global().async {
+            self.session.startRunning()
+        }
     }
 
     // 停止扫描
     func stopScanning() {
-        self.session.stopRunning()
         self.maskView.stopAnimation()
+        DispatchQueue.global().async {
+            self.session.stopRunning()
+        }
     }
 
+    @objc func popViewController() {
+        navigationController?.popViewController(animated: true)
+    }
+    
     private lazy var session: AVCaptureSession = {
         // 获取摄像设备
         guard let device = AVCaptureDevice.default(for: .video) else { return AVCaptureSession() }

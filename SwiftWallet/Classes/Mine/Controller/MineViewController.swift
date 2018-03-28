@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class MineViewController: BaseTableViewController {
 
@@ -88,11 +89,18 @@ extension MineViewController {
                 account = account?.replacingCharacters(in: NSMakeRange(3, 4), with: "****") as NSString?
             }
             cell.textLabel?.text = account! as String
+            cell.detailTextLabel?.text = nil
             cell.imageView?.image = nil
             
+        } else if section == 3 {
+            cell.textLabel?.text = titleArray[section]
+            cell.imageView?.image = UIImage(named: imageArray[section])
+            cell.detailTextLabel?.text = "V" + Bundle.appVersion()
+
         } else {
             cell.textLabel?.text = titleArray[section]
             cell.imageView?.image = UIImage(named: imageArray[section])
+            cell.detailTextLabel?.text = nil
         }
         return cell
     }
@@ -108,6 +116,11 @@ extension MineViewController {
 
         } else if indexPath.section == 3 {
             navigationController?.pushViewController(AboutViewController(), animated: true)
+
+        } else if indexPath.section == 4 {
+            AppVersionManager.sharedManager.fetchAPPVersion(completionHandle: {
+                MBProgressHUD.show(withStatus: NSLocalizedString("已更新到最新版本", comment: ""))
+            })
         }
     }
 

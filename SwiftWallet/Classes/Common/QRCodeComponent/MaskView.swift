@@ -82,7 +82,7 @@ class MaskView: UIView {
     func startAnimation() {
         let basic = CABasicAnimation(keyPath: "transform.translation.y")
         basic.fromValue = (0)
-        basic.toValue = (scannerHeight)
+        basic.toValue = (self.scannerHeight)
         basic.duration = 2
         basic.repeatCount = Float(NSIntegerMax)
         self.scanLineLayer?.add(basic, forKey: "translationY")
