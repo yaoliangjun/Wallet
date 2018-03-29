@@ -11,6 +11,7 @@ import Foundation
 extension UIFont {
 
     convenience init(_ font: CGFloat) {
-        self.init(name: ".SFUIText", size: font)!
+        let systemFont = UIFont.systemFont(ofSize: font)
+        self.init(name: systemFont.fontName, size: font)!
     }
 }

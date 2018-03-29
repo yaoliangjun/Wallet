@@ -8,8 +8,9 @@
 
 import UIKit
 import MBProgressHUD
+import Photos
 
-class TransferViewController: BaseTableViewController {
+class TransferViewController: BaseTableViewController, UIAlertViewDelegate {
 
     fileprivate var transOutBtn: UIButton?
     fileprivate var transInBtn: UIButton?
@@ -25,6 +26,7 @@ class TransferViewController: BaseTableViewController {
     fileprivate var downloadBtn: CommonButton?
     fileprivate var balanceModel: BalanceModel?
     fileprivate var qrCodeView: QRCodeView?
+    fileprivate var address: String?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,8 @@ class TransferViewController: BaseTableViewController {
     fileprivate func fetchWalletAddress() {
         let params = ["coinSymbol": AppConstants.appCoinSymbol]
         HomeServices.walletAddress(params: params, showHUD: true, success: { (response) in
-            self.qrCodeView?.setupAddress(address: response?.address)
+            self.address = response?.address
+            self.qrCodeView?.setupAddress(address: self.address)
 
         }) { (error) in
             
@@ -152,11 +155,33 @@ class TransferViewController: BaseTableViewController {
     }
 
     @objc fileprivate func copyBtnClick() {
-
+        if address != nil {
+            MBProgressHUD.show(withStatus: "地址已复制")
+            let pasteboard = UIPasteboard.general
+            pasteboard.string = address
+        }
     }
 
     @objc fileprivate func downloadBtnClick() {
 
+        PHPhotoLibrary.requestAuthorization { (status) in
+            DispatchQueue.main.async {
+                if status == .restricted || status == .denied {
+                    let alertView = UIAlertView(title: "提示", message: "请先去 [设置 - 牛盾钱包] 中打开访问开关", delegate: self, cancelButtonTitle: "取消")
+                    alertView.addButton(withTitle: "确定")
+                    alertView.show()
+                    return
+
+                } else {
+                    let qrCodeImage = self.qrCodeView?.qrCodeImage()
+                    if qrCodeImage == nil {
+                        return
+                    }
+
+                    UIImageWriteToSavedPhotosAlbum(qrCodeImage!, self, #selector(self.image(image:didFinishSavingWithError:contextInfo:)), nil)
+                }
+            }
+        }
     }
 
     fileprivate func setTransBtnSelected(_ tag: Int) {
@@ -176,6 +201,14 @@ class TransferViewController: BaseTableViewController {
             transOutBtn?.setImage(UIImage(named: "go_to_icon_normal"), for: .normal)
             transOutTriangleImageView?.isHidden = true
             transInTriangleImageView?.isHidden = false
+        }
+    }
+
+    @objc func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: AnyObject) {
+        if error == nil {
+            MBProgressHUD.show(withStatus: "保存成功")
+        } else {
+            MBProgressHUD.show(withStatus: "保存失败")
         }
     }
 
@@ -450,6 +483,18 @@ extension TransferViewController: UITextFieldDelegate {
         let regex = try! NSRegularExpression(pattern: expression, options: NSRegularExpression.Options.allowCommentsAndWhitespace)
         let numberOfMatches = regex.numberOfMatches(in: newString, options:NSRegularExpression.MatchingOptions.reportProgress, range: NSMakeRange(0, (newString as NSString).length))
         return numberOfMatches != 0
+    }
+
+    // MARK: - UIAlertViewDelegate
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
+        if buttonIndex == alertView.cancelButtonIndex {
+            return
+        }
+
+        let url = URL(string: UIApplicationOpenSettingsURLString)!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
     }
 }
 
