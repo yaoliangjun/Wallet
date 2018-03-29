@@ -16,9 +16,13 @@ class ContactListViewController: BaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchContactList()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchContactList()
+    }
+    
     // MARK: - HTTP
     fileprivate func fetchContactList() {
         let params = ["coinSymbol": AppConstants.appCoinSymbol]
@@ -34,7 +38,9 @@ class ContactListViewController: BaseTableViewController {
 
     // MARK: - Private Method
     @objc fileprivate func addContactBtnClick() {
-        navigationController?.pushViewController(AddContactViewController(), animated: true)
+        let addContactVC = AddContactViewController()
+        addContactVC.coinSymbol = ""
+        navigationController?.pushViewController(addContactVC, animated: true)
     }
 
     fileprivate func showDeleteAlertView() {

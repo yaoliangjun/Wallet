@@ -39,4 +39,14 @@ class TransferServices: NSObject {
             failure(error)
         }
     }
+
+    /** 新增联系人 */
+    static func addContact(params: [String: Any]?, showHUD: Bool, success: @escaping (_ response: Dictionary<String, Any>?) -> (), failure: @escaping (_ error: Error) -> ()) {
+        HttpManager.sharedManager.post(url: ServerUrl.addContact, params: params, showHUD: showHUD, success: { (response) in
+            success(response)
+
+        }) { (error) in
+            failure(error)
+        }
+    }
 }

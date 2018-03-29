@@ -7,25 +7,77 @@
 //  添加联系人
 
 import UIKit
+import AVFoundation
+import MBProgressHUD
 
-class AddContactViewController: BaseViewController {
+class AddContactViewController: BaseViewController, UIAlertViewDelegate {
 
+    var coinSymbol: String?
     fileprivate var addressTextField: UITextField?
     fileprivate var nickNameTextField: CommonTextField?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        coinSymbol = AppConstants.appCoinSymbol
     }
 
     // MARK: - Private Method
     @objc fileprivate func confirmBtnClick() {
 
+        let address = addressTextField?.text
+        let nickName = nickNameTextField?.text
+
+        if (address?.isEmpty)! {
+            MBProgressHUD.show(withStatus: "请输入对方地址")
+            return
+        }
+
+        if (nickName?.isEmpty)! {
+            MBProgressHUD.show(withStatus: "请输入对方昵称或手机号")
+            return
+        }
+
+        view.endEditing(true)
+
+        let params = ["coinSymbol" : coinSymbol ?? "",  "address" : address!,  "nickName" : nickName!]
+        TransferServices.addContact(params: params, showHUD: true, success: { (response) in
+            MBProgressHUD.show(withStatus: NSLocalizedString("添加成功", comment: ""), completionHandle: {
+                self.navigationController?.popViewController(animated: true)
+            })
+
+        }) { (error) in
+
+        }
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {
 
+        view.endEditing(true)
+
+        let authStatus = AVCaptureDevice.authorizationStatus(for: .video)
+        if authStatus == .restricted || authStatus == .denied {
+            let alertView = UIAlertView(title: "提示", message: "请先去 [设置 - 牛盾钱包] 中打开访问开关", delegate: self, cancelButtonTitle: "取消")
+            alertView.addButton(withTitle: "确定")
+            alertView.show()
+            return
+
+        } else {
+            let scanVC = ScanViewController()
+            scanVC.didScanSuccessClosure = { (result: String?) in
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1, execute: {
+                    let viewControllers = self.navigationController?.viewControllers
+                    for viewController in viewControllers! {
+                        if viewController.isKind(of: ScanViewController.self) {
+                            self.navigationController?.popViewController(animated: true)
+                            break
+                        }
+                    }
+                    self.addressTextField?.text = result
+                })
+
+            }
+            navigationController?.pushViewController(scanVC, animated: true)
+        }
     }
 
     // MARK: - Getter / Setter
@@ -64,7 +116,7 @@ class AddContactViewController: BaseViewController {
             make.height.equalTo(23);
         }
 
-        nickNameTextField = CommonTextField(text: nil, textColor: AppConstants.goldColor, placeholder: NSLocalizedString("请输入对方昵称或手机号", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(15))
+        nickNameTextField = CommonTextField(text: nil, textColor: UIColor.white, placeholder: NSLocalizedString("请输入对方昵称或手机号", comment: ""), placeholderColor: GlobalConstants.placeholderColor, font: UIFont(15))
         view.addSubview(nickNameTextField!)
         nickNameTextField!.snp.makeConstraints { (make) in
             make.top.equalTo(contentView.snp.bottom).offset(15)
@@ -81,3 +133,19 @@ class AddContactViewController: BaseViewController {
         }
     }
 }
+
+extension AddContactViewController {
+
+    // MARK: - UIAlertViewDelegate
+    func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
+        if buttonIndex == alertView.cancelButtonIndex {
+            return
+        }
+
+        let url = URL(string: UIApplicationOpenSettingsURLString)!
+        if UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
+    }
+}
+

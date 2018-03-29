@@ -52,7 +52,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     func startScanning() {
         self.maskView.startAnimation()
         DispatchQueue.global().async {
-            self.session.startRunning()
+            if !self.session.isRunning {
+                self.session.startRunning()
+            }
         }
     }
 
@@ -60,7 +62,9 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
     func stopScanning() {
         self.maskView.stopAnimation()
         DispatchQueue.global().async {
-            self.session.stopRunning()
+            if self.session.isRunning {
+                self.session.stopRunning()
+            }
         }
     }
 
@@ -115,11 +119,11 @@ class ScanViewController: UIViewController, AVCaptureMetadataOutputObjectsDelega
         if metadataObjects.count > 0 {
             playSound("noticeMusic.caf")
             let metadataObject: AVMetadataMachineReadableCodeObject = metadataObjects.first as! AVMetadataMachineReadableCodeObject
-            if didScanSuccessClosure != nil {
-                didScanSuccessClosure!(metadataObject.stringValue)
+            
+            if self.didScanSuccessClosure != nil {
+                self.didScanSuccessClosure!(metadataObject.stringValue)
+                self.stopScanning()
             }
-            self.stopScanning()
-            navigationController?.popViewController(animated: true)
         }
     }
 
