@@ -24,20 +24,18 @@ class AppVersionManager: NSObject, UIAlertViewDelegate {
             let isForceUpdate = response?.force
             let doubleVersion = Double(Bundle.appBuildVersion())
             if (response?.code)! > doubleVersion! {
-                DispatchQueue.main.async {
-                    // 强制更新
-                    if isForceUpdate! {
-                        self.alertView  = MyAlertView(title: "检测到新版本, 马上更新吧", message: "", delegate: self, cancelButtonTitle: nil)
-                        self.alertView?.addButton(withTitle: "确定")
-                        self.alertView?.show()
+                // 强制更新
+                if isForceUpdate! {
+                    self.alertView  = MyAlertView(title: "检测到新版本, 马上更新吧", message: "", delegate: self, cancelButtonTitle: nil)
+                    self.alertView?.addButton(withTitle: "确定")
+                    self.alertView?.show()
 
-                    } else {
-                        // 可选更新
-                        self.alertView  = MyAlertView(title: "检测到新版本, 是否立即更新?", message: "", delegate: self, cancelButtonTitle: "取消")
-                        self.alertView?.addButton(withTitle: "确定")
-                        self.alertView?.shouldDismiss = true
-                        self.alertView?.show()
-                    }
+                } else {
+                    // 可选更新
+                    self.alertView  = MyAlertView(title: "检测到新版本, 是否立即更新?", message: "", delegate: self, cancelButtonTitle: "取消")
+                    self.alertView?.addButton(withTitle: "确定")
+                    self.alertView?.shouldDismiss = true
+                    self.alertView?.show()
                 }
 
             } else {

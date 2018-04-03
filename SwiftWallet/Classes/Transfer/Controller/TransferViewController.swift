@@ -28,14 +28,35 @@ class TransferViewController: BaseTableViewController, UIAlertViewDelegate {
     fileprivate var qrCodeView: QRCodeView?
     fileprivate var address: String?
 
+    // MARK: - Life cycle
+    override init() {
+        super.init()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.title = "转账";
+        self.tabBarItem.image = UIImage(named: "home_transfer_normal")
+        self.tabBarItem.selectedImage = UIImage(named: "home_transfer_press")?.withRenderingMode(.alwaysOriginal)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchBalance()
-        fetchWalletAddress()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchBalance()
+        fetchWalletAddress()
+    }
+
+    // 如果需要保存数据在此归档和解档
+    override func encodeRestorableState(with coder: NSCoder) {
+        super.encodeRestorableState(with: coder)
+    }
+
+    override func decodeRestorableState(with coder: NSCoder) {
+        super.decodeRestorableState(with: coder)
     }
     
     // MARK: - HTTP
@@ -212,10 +233,15 @@ class TransferViewController: BaseTableViewController, UIAlertViewDelegate {
         }
     }
 
+    override func pullDownHandle() {
+        fetchBalance()
+        fetchWalletAddress()
+    }
+
     // MARK: - Getter / Setter
     override func setupSubViews() {
         title = NSLocalizedString("转账", comment: "")
-        tableView = createTableView(delegate: self, style: .plain)
+        tableView = createTableView(delegate: self, style: .plain, needRefresh: true)
         tableView!.frame = CGRect(x: 0, y: 0, width: GlobalConstants.screenWidth, height: GlobalConstants.tableViewHeight - GlobalConstants.tabBarHeight)
         tableView!.allowsSelection = false
         tableView!.tableHeaderView = tableHeaderView

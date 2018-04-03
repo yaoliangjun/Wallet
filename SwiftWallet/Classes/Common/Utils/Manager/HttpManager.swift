@@ -67,7 +67,7 @@ extension HttpManager {
 
                 var responseJson = JSON(value).rawString()
                 responseJson = responseJson?.replacingOccurrences(of: "\n", with: "")
-                print("\nREQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nREQUEST METHOD: \(method.rawValue) \nRESPONSE: \(responseJson!)\n\n")
+                print("\nREQUEST METHOD: \(method.rawValue) \nREQUEST URL: \(requestUrl) \nREQUEST PARAMS: \(String(describing: params)) \nRESPONSE: \(responseJson!)\n\n")
 
                 let responseModel = ResponseModel<T>.deserialize(from: responseJson)
                 if responseModel?.code == 401 {

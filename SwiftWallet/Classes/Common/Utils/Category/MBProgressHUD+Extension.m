@@ -141,6 +141,8 @@ static CGFloat alpha = 0.7;
 /** 显示菊花HUD */
 + (void)showLoading
 {
+    [self dismiss];
+    
     dispatch_async(dispatch_get_main_queue(), ^{
         MBProgressHUD *hud = [MBProgressHUD defaultHUD];
         CGFloat hudWH = 100;

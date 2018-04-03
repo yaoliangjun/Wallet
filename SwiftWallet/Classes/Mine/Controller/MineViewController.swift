@@ -11,6 +11,18 @@ import MBProgressHUD
 
 class MineViewController: BaseTableViewController {
 
+    // MARK: - Life cycle
+    override init() {
+        super.init()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.title = "我的";
+        self.tabBarItem.image = UIImage(named: "home_mine_normal")
+        self.tabBarItem.selectedImage = UIImage(named: "home_mine_press")?.withRenderingMode(.alwaysOriginal)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 

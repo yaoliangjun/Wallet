@@ -14,8 +14,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    // 是否启用状态保存
+    func application(_ application: UIApplication, shouldRestoreApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
 
+    // 是否启用应用恢复
+    func application(_ application: UIApplication, shouldSaveApplicationState coder: NSCoder) -> Bool {
+        return true
+    }
+
+    func application(_ application: UIApplication, willFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
         setupIQKeyboardManager()
 
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -37,11 +46,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         return true
     }
+    
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//
+//        setupIQKeyboardManager()
+//
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.backgroundColor = GlobalConstants.backgroundColor
+//        window?.makeKeyAndVisible()
+//
+//        let hasShowGuidePage = UserDefaults.standard.object(forKey: AppConstants.hasShowGuidePage) as? Bool
+//        if let hasShowGuidePage = hasShowGuidePage, hasShowGuidePage {
+//            let token = UserDefaults.standard.object(forKey: AppConstants.token) as? String
+//            guard let _ = token else {
+//                showLoginPage()
+//                return true
+//            }
+//            showMainPage()
+//
+//        } else {
+//            showGuidePage()
+//        }
+//
+//        return true
+//    }
 
     // 显示主页面
     func showMainPage() {
         window?.rootViewController = nil
-        window?.rootViewController = MainTabBarController()
+        let mainTabBarVC = MainTabBarController()
+        mainTabBarVC.restorationIdentifier = String(describing: type(of: MainTabBarController.self))
+        window?.rootViewController = mainTabBarVC 
     }
 
     // 显示登录页

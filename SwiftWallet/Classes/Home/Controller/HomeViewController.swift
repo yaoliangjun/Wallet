@@ -12,10 +12,26 @@ class HomeViewController: BaseViewController {
 
     fileprivate var balanceLabel: UILabel?
 
+    // MARK: - Life cycle
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        title = "首页";
+        tabBarItem.image = UIImage(named: "home_home_normal")
+        tabBarItem.selectedImage = UIImage(named: "home_home_press")?.withRenderingMode(.alwaysOriginal)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        fetchBalance()
         AppVersionManager.sharedManager.fetchAPPVersion(completionHandle: nil)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchBalance()
     }
 
     // MARK: - HTTP
@@ -41,7 +57,12 @@ class HomeViewController: BaseViewController {
     // MARK: - Getter / Setter
     override func setupSubViews() {
 
-        let scrollView = UIScrollView()
+        let scrollView = RefreshScrollView()
+        // 下拉刷新
+        scrollView.pullDownHandle = {
+            self.fetchBalance()
+        }
+
         scrollView.bounces = true
         scrollView.showsVerticalScrollIndicator = false
         view.addSubview(scrollView)

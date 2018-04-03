@@ -23,6 +23,14 @@ class BaseTableViewController: BaseViewController {
     var pageCount = 15 // 默认每页显示条数
 
     // MARK: - Life Cycle
+    init() {
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

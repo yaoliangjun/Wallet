@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		54FA2E006F9E7282C1C62D04 /* Pods_SwiftWallet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F684C70A66E44E96101EADA9 /* Pods_SwiftWallet.framework */; };
+		E90EEA6D2073742B00640E21 /* RefreshScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90EEA6C2073742B00640E21 /* RefreshScrollView.swift */; };
 		E913FEB02041518300E79408 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FEAF2041518200E79408 /* ScanViewController.swift */; };
 		E913FEB2204151DF00E79408 /* MaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E913FEB1204151DF00E79408 /* MaskView.swift */; };
 		E913FEBE2041520D00E79408 /* code_box@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E913FEB52041520D00E79408 /* code_box@2x.png */; };
@@ -110,6 +111,7 @@
 /* Begin PBXFileReference section */
 		0B5DDB111F7A4FE9793CB16C /* Pods-SwiftWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet.debug.xcconfig"; sourceTree = "<group>"; };
 		361138C3D9F22DA1DACAF60E /* Pods-SwiftWallet.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWallet.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWallet/Pods-SwiftWallet.release.xcconfig"; sourceTree = "<group>"; };
+		E90EEA6C2073742B00640E21 /* RefreshScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshScrollView.swift; sourceTree = "<group>"; };
 		E913FEAF2041518200E79408 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		E913FEB1204151DF00E79408 /* MaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskView.swift; sourceTree = "<group>"; };
 		E913FEB52041520D00E79408 /* code_box@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "code_box@2x.png"; sourceTree = "<group>"; };
@@ -422,6 +424,7 @@
 				E92D12AF201B0B66007B4445 /* PlaceholderView.swift */,
 				E92D14C7201EF412007B4445 /* QRCodeView.swift */,
 				E985804E206B8DC00055B46D /* MyAlertView.swift */,
+				E90EEA6C2073742B00640E21 /* RefreshScrollView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -947,6 +950,7 @@
 				E95817632015967E001DF686 /* UIDevice+Extension.swift in Sources */,
 				E9170D6D2012E9B100E86770 /* Dictionary+Extension.swift in Sources */,
 				E9F3AC722019C98E00E98DC4 /* DateSearchView.swift in Sources */,
+				E90EEA6D2073742B00640E21 /* RefreshScrollView.swift in Sources */,
 				E91793382005F30500AC0376 /* GuideViewController.swift in Sources */,
 				E91793292005EEF800AC0376 /* UIAlertController+Extension.swift in Sources */,
 				E917932D2005EEF800AC0376 /* UIImage+Extension.swift in Sources */,

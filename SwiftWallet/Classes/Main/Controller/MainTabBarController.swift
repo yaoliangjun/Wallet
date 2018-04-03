@@ -10,12 +10,6 @@ import UIKit
 
 class MainTabBarController: BaseTabBarController {
 
-    // 单例
-//    static let mainTabBarController = MainTabBarController()
-//    static func sharedMainTabBar() -> MainTabBarController {
-//        return mainTabBarController
-//    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewController()
@@ -40,6 +34,7 @@ class MainTabBarController: BaseTabBarController {
         childController.tabBarItem.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
         childController.tabBarItem.selectedImage = UIImage(named: selectedImage)?.withRenderingMode(.alwaysOriginal)
         let baseNavigationController = BaseNavigationController(rootViewController: childController)
+        baseNavigationController.restorationIdentifier = String(describing: type(of: BaseNavigationController.self))
         addChildViewController(baseNavigationController)
     }
 }
