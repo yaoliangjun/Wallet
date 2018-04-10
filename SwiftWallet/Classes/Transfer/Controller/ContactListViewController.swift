@@ -7,6 +7,7 @@
 //  联系人列表
 
 import UIKit
+import MBProgressHUD
 
 class ContactListViewController: BaseTableViewController {
 
@@ -36,6 +37,40 @@ class ContactListViewController: BaseTableViewController {
         }
     }
 
+    fileprivate func updateContact() {
+
+        guard let contactId = selectedContactModel?.id, let address = selectedContactModel?.address else {
+            return
+        }
+
+        let params = ["id": contactId, "address": address, "nickName": selectedContactModel?.nickName ?? ""]
+        TransferServices.updateContact(params: params, showHUD: true, success: { (response) in
+            MBProgressHUD.show(withStatus: NSLocalizedString("修改成功", comment: ""), completionHandle: {
+                self.fetchContactList()
+            })
+
+        }) { (error) in
+
+        }
+    }
+
+    fileprivate func deleteContact() {
+
+        guard let contactId = selectedContactModel?.id else {
+            return
+        }
+
+        let params = ["id": contactId]
+        TransferServices.deleteContact(params: params, showHUD: true, success: { (response) in
+            MBProgressHUD.show(withStatus: NSLocalizedString("删除成功", comment: ""), completionHandle: {
+                self.fetchContactList()
+            })
+
+        }) { (error) in
+
+        }
+    }
+
     // MARK: - Private Method
     @objc fileprivate func addContactBtnClick() {
         let addContactVC = AddContactViewController()
@@ -45,6 +80,7 @@ class ContactListViewController: BaseTableViewController {
 
     fileprivate func showDeleteAlertView() {
         let alertController = UIAlertController(title: "", message: NSLocalizedString("是否要删除该联系人？", comment: ""), preferredStyle: .actionSheet, positiveActionTitle: NSLocalizedString("删除", comment: ""), positiveCompletionHandle: { (alert) in
+            self.deleteContact()
 
         }, negativeActionTitle: NSLocalizedString("取消", comment: "")) { (alert) in
 

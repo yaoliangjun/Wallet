@@ -97,6 +97,8 @@ class ExchangeViewController: BaseViewController {
     }
 
     @objc fileprivate func addContactBtnClick() {
+        view.endEditing(true)
+
         let contactListVC = ContactListViewController()
         contactListVC.didSelectedContactBlock = { (contactModel: ContactModel) in
             self.addressTextField?.text = contactModel.address
@@ -109,6 +111,8 @@ class ExchangeViewController: BaseViewController {
     }
 
     @objc fileprivate func scanQRCodeBtnClick() {
+        view.endEditing(true)
+
         let scanVC = ScanViewController()
         scanVC.didScanSuccessClosure = { (result: String?) in
             self.addressTextField?.text = result

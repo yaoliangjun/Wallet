@@ -52,6 +52,11 @@ extension HttpManager {
         request(url: url, method: .put, params: params, showHUD: showHUD, success: success, failture: failture)
     }
 
+    // MARK: DELETE请求
+    func delete<T: HandyJSON>(url: String, params: [String : Any]?, showHUD: Bool, success: @escaping (_ response: T?) -> (), failture: @escaping (_ error: Error) -> ()) {
+        request(url: url, method: .delete, params: params, showHUD: showHUD, success: success, failture: failture)
+    }
+
     // MARK: 请求基类
     fileprivate func request<T: HandyJSON>(url: String, method: HTTPMethod, params: Parameters?, showHUD: Bool, success: @escaping (_ response: T?) -> (), failture: @escaping (_ error: Error) -> ()) -> () {
 
